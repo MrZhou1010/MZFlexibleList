@@ -49,7 +49,7 @@ class DemoSectionController: ListSectionController {
         guard let cell = self.collectionContext?.dequeueReusableCell(of: LabelCell.self, for: self, at: index) as? LabelCell else {
             fatalError()
         }
-        cell.text = object?.name
+        cell.text = self.object?.name
         return cell
     }
     

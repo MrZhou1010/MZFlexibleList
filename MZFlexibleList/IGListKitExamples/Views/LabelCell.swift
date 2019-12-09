@@ -11,6 +11,7 @@ import IGListKit
 
 class LabelCell: UICollectionViewCell {
     
+    /// 文本内容
     public var text: String? {
         get {
             return self.label.text
@@ -27,9 +28,10 @@ class LabelCell: UICollectionViewCell {
         return self.font.lineHeight + self.insets.top + self.insets.bottom
     }
     
+    /// 根据文本内容获取宽高
     static func textHeight(_ text: String, width: CGFloat) -> CGFloat {
         let constrainedSize = CGSize(width: width - self.insets.left - self.insets.right, height: CGFloat.greatestFiniteMagnitude)
-        let attributes = [NSAttributedString.Key.font: font]
+        let attributes = [NSAttributedString.Key.font: self.font]
         let options: NSStringDrawingOptions = [.usesFontLeading, .usesLineFragmentOrigin]
         let boundRect = (text as NSString).boundingRect(with: constrainedSize, options: options, attributes: attributes, context: nil)
         return ceil(boundRect.height) + self.insets.top + self.insets.bottom
@@ -77,7 +79,7 @@ class LabelCell: UICollectionViewCell {
 }
 
 extension LabelCell: ListBindable {
-    func bindViewModel(_ viewModel: Any) {
+    public func bindViewModel(_ viewModel: Any) {
         guard let viewModel = viewModel as? String else {
             return
         }

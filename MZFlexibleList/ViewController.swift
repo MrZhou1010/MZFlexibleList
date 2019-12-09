@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "MZFlexibleList"
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(self.btn)
     }
@@ -27,9 +28,10 @@ class ViewController: UIViewController {
     }()
     
     @objc private func btnClicked(btn: UIButton) {
-        let momentsVC = MZMomentsVC()
+        // let momentsVC = MZMomentsVC()
+        let momentsVC = DemosViewController()
         momentsVC.modalPresentationStyle = .fullScreen
-        self.present(momentsVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(momentsVC, animated: true)
     }
 }
 

@@ -47,6 +47,34 @@
 		B49EC385239A577300A2538A /* MonthTitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EC384239A577300A2538A /* MonthTitleViewModel.swift */; };
 		B49EC388239A584D00A2538A /* DemoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EC387239A584D00A2538A /* DemoSectionController.swift */; };
 		B49EC38B239A5C7400A2538A /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49EC38A239A5C7400A2538A /* LabelCell.swift */; };
+		B4B5FFA0239F2F5200D7659A /* AnnouncingDepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FF9F239F2F5200D7659A /* AnnouncingDepsViewController.swift */; };
+		B4B5FFA2239F329C00D7659A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFA1239F329C00D7659A /* CalendarViewController.swift */; };
+		B4B5FFA4239F34B500D7659A /* DiffTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFA3239F34B500D7659A /* DiffTableViewController.swift */; };
+		B4B5FFA6239F404600D7659A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFA5239F404600D7659A /* DisplayViewController.swift */; };
+		B4B5FFA8239F411D00D7659A /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFA7239F411D00D7659A /* EmptyViewController.swift */; };
+		B4B5FFAA239F446800D7659A /* MixedDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFA9239F446800D7659A /* MixedDataViewController.swift */; };
+		B4B5FFAC239F4B5800D7659A /* NestedAdapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFAB239F4B5800D7659A /* NestedAdapterViewController.swift */; };
+		B4B5FFAF239F4D2500D7659A /* ObjcDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFAE239F4D2500D7659A /* ObjcDemoViewController.m */; };
+		B4B5FFB2239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFB1239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m */; };
+		B4B5FFB4239F4F6D00D7659A /* ReorderableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFB3239F4F6D00D7659A /* ReorderableViewController.swift */; };
+		B4B5FFB6239F6A9300D7659A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFB5239F6A9300D7659A /* SearchViewController.swift */; };
+		B4B5FFB8239F6C6700D7659A /* SelfSizingCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFB7239F6C6700D7659A /* SelfSizingCellsViewController.swift */; };
+		B4B5FFBA239F6D7600D7659A /* SingleSectionStoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFB9239F6D7600D7659A /* SingleSectionStoryboardViewController.swift */; };
+		B4B5FFBC239F6FD200D7659A /* SingleSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFBB239F6FD200D7659A /* SingleSectionViewController.swift */; };
+		B4B5FFBE239F71F300D7659A /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFBD239F71F300D7659A /* StoryboardViewController.swift */; };
+		B4B5FFC0239F74A000D7659A /* SupplementaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFBF239F74A000D7659A /* SupplementaryViewController.swift */; };
+		B4B5FFC2239F756800D7659A /* WorkingRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFC1239F756800D7659A /* WorkingRangeViewController.swift */; };
+		B4B5FFC5239F98C400D7659A /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFC4239F98C400D7659A /* PersonModel.m */; };
+		B4B5FFC7239F9A7400D7659A /* PersonModel.value in Resources */ = {isa = PBXBuildFile; fileRef = B4B5FFC6239F9A7400D7659A /* PersonModel.value */; };
+		B4B5FFCA239F9ADF00D7659A /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFC9239F9ADF00D7659A /* Post.m */; };
+		B4B5FFCD239F9BC300D7659A /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B5FFCC239F9BC300D7659A /* Demo.storyboard */; };
+		B4B5FFD0239F9C6700D7659A /* IncrementAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFCF239F9C6700D7659A /* IncrementAnnouncer.swift */; };
+		B4B5FFD2239F9DC600D7659A /* HorizontalSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFD1239F9DC600D7659A /* HorizontalSectionController.swift */; };
+		B4B5FFD4239F9F7400D7659A /* ListeningSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFD3239F9F7400D7659A /* ListeningSectionController.swift */; };
+		B4B5FFD6239FA13E00D7659A /* MonthSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFD5239FA13E00D7659A /* MonthSectionController.swift */; };
+		B4B5FFD9239FA2B900D7659A /* PersonSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFD8239FA2B900D7659A /* PersonSectionController.m */; };
+		B4B5FFDC239FA37E00D7659A /* PostSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFDB239FA37E00D7659A /* PostSectionController.m */; };
+		B4B5FFDE239FA40500D7659A /* RemoveSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +150,40 @@
 		B49EC384239A577300A2538A /* MonthTitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTitleViewModel.swift; sourceTree = "<group>"; };
 		B49EC387239A584D00A2538A /* DemoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSectionController.swift; sourceTree = "<group>"; };
 		B49EC38A239A5C7400A2538A /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		B4B5FF9F239F2F5200D7659A /* AnnouncingDepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncingDepsViewController.swift; sourceTree = "<group>"; };
+		B4B5FFA1239F329C00D7659A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B4B5FFA3239F34B500D7659A /* DiffTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffTableViewController.swift; sourceTree = "<group>"; };
+		B4B5FFA5239F404600D7659A /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		B4B5FFA7239F411D00D7659A /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		B4B5FFA9239F446800D7659A /* MixedDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedDataViewController.swift; sourceTree = "<group>"; };
+		B4B5FFAB239F4B5800D7659A /* NestedAdapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedAdapterViewController.swift; sourceTree = "<group>"; };
+		B4B5FFAD239F4D2500D7659A /* ObjcDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcDemoViewController.h; sourceTree = "<group>"; };
+		B4B5FFAE239F4D2500D7659A /* ObjcDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcDemoViewController.m; sourceTree = "<group>"; };
+		B4B5FFB0239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcGeneratedModelDemoViewController.h; sourceTree = "<group>"; };
+		B4B5FFB1239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcGeneratedModelDemoViewController.m; sourceTree = "<group>"; };
+		B4B5FFB3239F4F6D00D7659A /* ReorderableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableViewController.swift; sourceTree = "<group>"; };
+		B4B5FFB5239F6A9300D7659A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B4B5FFB7239F6C6700D7659A /* SelfSizingCellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingCellsViewController.swift; sourceTree = "<group>"; };
+		B4B5FFB9239F6D7600D7659A /* SingleSectionStoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSectionStoryboardViewController.swift; sourceTree = "<group>"; };
+		B4B5FFBB239F6FD200D7659A /* SingleSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSectionViewController.swift; sourceTree = "<group>"; };
+		B4B5FFBD239F71F300D7659A /* StoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardViewController.swift; sourceTree = "<group>"; };
+		B4B5FFBF239F74A000D7659A /* SupplementaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryViewController.swift; sourceTree = "<group>"; };
+		B4B5FFC1239F756800D7659A /* WorkingRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingRangeViewController.swift; sourceTree = "<group>"; };
+		B4B5FFC3239F98C400D7659A /* PersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		B4B5FFC4239F98C400D7659A /* PersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		B4B5FFC6239F9A7400D7659A /* PersonModel.value */ = {isa = PBXFileReference; lastKnownFileType = text; path = PersonModel.value; sourceTree = "<group>"; };
+		B4B5FFC8239F9ADF00D7659A /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		B4B5FFC9239F9ADF00D7659A /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		B4B5FFCC239F9BC300D7659A /* Demo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
+		B4B5FFCF239F9C6700D7659A /* IncrementAnnouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementAnnouncer.swift; sourceTree = "<group>"; };
+		B4B5FFD1239F9DC600D7659A /* HorizontalSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSectionController.swift; sourceTree = "<group>"; };
+		B4B5FFD3239F9F7400D7659A /* ListeningSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeningSectionController.swift; sourceTree = "<group>"; };
+		B4B5FFD5239FA13E00D7659A /* MonthSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSectionController.swift; sourceTree = "<group>"; };
+		B4B5FFD7239FA2B900D7659A /* PersonSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonSectionController.h; sourceTree = "<group>"; };
+		B4B5FFD8239FA2B900D7659A /* PersonSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonSectionController.m; sourceTree = "<group>"; };
+		B4B5FFDA239FA37E00D7659A /* PostSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostSectionController.h; sourceTree = "<group>"; };
+		B4B5FFDB239FA37E00D7659A /* PostSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostSectionController.m; sourceTree = "<group>"; };
+		B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveSectionController.swift; sourceTree = "<group>"; };
 		C0AB4CF69C8140DE805DC0D3 /* Pods-MZFlexibleList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.debug.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4CF27F56F27DC8C59453BE /* Pods-MZFlexibleList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.release.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +333,25 @@
 			children = (
 				B43B4F53239DEB9A00392555 /* DemosViewController.swift */,
 				B43B4F57239E36CE00392555 /* LoadMoreViewController.swift */,
+				B4B5FF9F239F2F5200D7659A /* AnnouncingDepsViewController.swift */,
+				B4B5FFA1239F329C00D7659A /* CalendarViewController.swift */,
+				B4B5FFA3239F34B500D7659A /* DiffTableViewController.swift */,
+				B4B5FFA5239F404600D7659A /* DisplayViewController.swift */,
+				B4B5FFA7239F411D00D7659A /* EmptyViewController.swift */,
+				B4B5FFA9239F446800D7659A /* MixedDataViewController.swift */,
+				B4B5FFAB239F4B5800D7659A /* NestedAdapterViewController.swift */,
+				B4B5FFAD239F4D2500D7659A /* ObjcDemoViewController.h */,
+				B4B5FFAE239F4D2500D7659A /* ObjcDemoViewController.m */,
+				B4B5FFB0239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.h */,
+				B4B5FFB1239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m */,
+				B4B5FFB3239F4F6D00D7659A /* ReorderableViewController.swift */,
+				B4B5FFB5239F6A9300D7659A /* SearchViewController.swift */,
+				B4B5FFB7239F6C6700D7659A /* SelfSizingCellsViewController.swift */,
+				B4B5FFB9239F6D7600D7659A /* SingleSectionStoryboardViewController.swift */,
+				B4B5FFBB239F6FD200D7659A /* SingleSectionViewController.swift */,
+				B4B5FFBD239F71F300D7659A /* StoryboardViewController.swift */,
+				B4B5FFBF239F74A000D7659A /* SupplementaryViewController.swift */,
+				B4B5FFC1239F756800D7659A /* WorkingRangeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +367,8 @@
 		B49EC378239A50BD00A2538A /* IGListKitExamples */ = {
 			isa = PBXGroup;
 			children = (
+				B4B5FFCE239F9C3200D7659A /* Systems */,
+				B4B5FFCB239F9BA800D7659A /* Storyboard */,
 				B43B4F52239DEAE300392555 /* ViewControllers */,
 				B49EC389239A5C5600A2538A /* Views */,
 				B49EC386239A580E00A2538A /* SectionControllers */,
@@ -303,6 +386,11 @@
 				B49EC380239A55B000A2538A /* FeedItem.swift */,
 				B49EC382239A56DC00A2538A /* DayViewModel.swift */,
 				B49EC384239A577300A2538A /* MonthTitleViewModel.swift */,
+				B4B5FFC3239F98C400D7659A /* PersonModel.h */,
+				B4B5FFC4239F98C400D7659A /* PersonModel.m */,
+				B4B5FFC6239F9A7400D7659A /* PersonModel.value */,
+				B4B5FFC8239F9ADF00D7659A /* Post.h */,
+				B4B5FFC9239F9ADF00D7659A /* Post.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +405,14 @@
 				B43B4F5F239E447300392555 /* ExpandableSectionController.swift */,
 				B43B4F61239E465000392555 /* FeedItemSectionController.swift */,
 				B43B4F63239E4D5200392555 /* GridSectionController.swift */,
+				B4B5FFD1239F9DC600D7659A /* HorizontalSectionController.swift */,
+				B4B5FFD3239F9F7400D7659A /* ListeningSectionController.swift */,
+				B4B5FFD5239FA13E00D7659A /* MonthSectionController.swift */,
+				B4B5FFD7239FA2B900D7659A /* PersonSectionController.h */,
+				B4B5FFD8239FA2B900D7659A /* PersonSectionController.m */,
+				B4B5FFDA239FA37E00D7659A /* PostSectionController.h */,
+				B4B5FFDB239FA37E00D7659A /* PostSectionController.m */,
+				B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -333,6 +429,22 @@
 				B43B4F6E239E564800392555 /* UserHeaderView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B4B5FFCB239F9BA800D7659A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5FFCC239F9BC300D7659A /* Demo.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B4B5FFCE239F9C3200D7659A /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				B4B5FFCF239F9C6700D7659A /* IncrementAnnouncer.swift */,
+			);
+			path = Systems;
 			sourceTree = "<group>";
 		};
 		FB6B6D0495CEE2617019F665 /* Frameworks */ = {
@@ -453,7 +565,9 @@
 				B43B4F70239E564800392555 /* UserHeaderView.xib in Resources */,
 				B430D1B5239668BE00053B77 /* LaunchScreen.storyboard in Resources */,
 				B430D1B2239668BE00053B77 /* Assets.xcassets in Resources */,
+				B4B5FFCD239F9BC300D7659A /* Demo.storyboard in Resources */,
 				B43B4F6A239E54C200392555 /* UserFooterView.xib in Resources */,
+				B4B5FFC7239F9A7400D7659A /* PersonModel.value in Resources */,
 				B430D1B0239668AB00053B77 /* Main.storyboard in Resources */,
 				B49EC36B2399EC1600A2538A /* listData.json in Resources */,
 			);
@@ -523,36 +637,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				B430D1AD239668AB00053B77 /* ViewController.swift in Sources */,
+				B4B5FFBE239F71F300D7659A /* StoryboardViewController.swift in Sources */,
 				B49EC377239A410600A2538A /* MZContentListSectionController.m in Sources */,
+				B4B5FFAF239F4D2500D7659A /* ObjcDemoViewController.m in Sources */,
+				B4B5FFB8239F6C6700D7659A /* SelfSizingCellsViewController.swift in Sources */,
 				B49EC37F239A551500A2538A /* Month.swift in Sources */,
+				B4B5FFA2239F329C00D7659A /* CalendarViewController.swift in Sources */,
 				B43B4F6F239E564800392555 /* UserHeaderView.swift in Sources */,
 				B49EC38B239A5C7400A2538A /* LabelCell.swift in Sources */,
+				B4B5FFDC239FA37E00D7659A /* PostSectionController.m in Sources */,
+				B4B5FFA8239F411D00D7659A /* EmptyViewController.swift in Sources */,
+				B4B5FFB4239F4F6D00D7659A /* ReorderableViewController.swift in Sources */,
 				B43B4F62239E465000392555 /* FeedItemSectionController.swift in Sources */,
 				B49EC37D239A53E200A2538A /* SelectionModel.swift in Sources */,
 				B43B4F60239E447300392555 /* ExpandableSectionController.swift in Sources */,
 				B49EC3712399F26300A2538A /* MZHeaderCollectionViewCell.m in Sources */,
+				B4B5FFCA239F9ADF00D7659A /* Post.m in Sources */,
 				B430D1A9239668AB00053B77 /* AppDelegate.swift in Sources */,
+				B4B5FFD2239F9DC600D7659A /* HorizontalSectionController.swift in Sources */,
+				B4B5FFBC239F6FD200D7659A /* SingleSectionViewController.swift in Sources */,
 				B43B4F64239E4D5200392555 /* GridSectionController.swift in Sources */,
+				B4B5FFA4239F34B500D7659A /* DiffTableViewController.swift in Sources */,
 				B43B4F69239E54C200392555 /* UserFooterView.swift in Sources */,
 				B43B4F54239DEB9A00392555 /* DemosViewController.swift in Sources */,
+				B4B5FFA6239F404600D7659A /* DisplayViewController.swift in Sources */,
 				B43175C32399090D0093D0AA /* MZListModel.m in Sources */,
 				B43B4F66239E51A800392555 /* CenterLabelCell.swift in Sources */,
+				B4B5FFD6239FA13E00D7659A /* MonthSectionController.swift in Sources */,
 				B43B4F5E239E434900392555 /* EmbeddedSectionController.swift in Sources */,
 				B49EC383239A56DC00A2538A /* DayViewModel.swift in Sources */,
 				B43175BD2398E3880093D0AA /* MZNavigationView.m in Sources */,
+				B4B5FFAA239F446800D7659A /* MixedDataViewController.swift in Sources */,
 				B49EC381239A55B000A2538A /* FeedItem.swift in Sources */,
+				B4B5FFD4239F9F7400D7659A /* ListeningSectionController.swift in Sources */,
 				B49EC374239A2E4600A2538A /* MZContentCollectionViewCell.m in Sources */,
+				B4B5FFD0239F9C6700D7659A /* IncrementAnnouncer.swift in Sources */,
+				B4B5FFC0239F74A000D7659A /* SupplementaryViewController.swift in Sources */,
+				B4B5FFAC239F4B5800D7659A /* NestedAdapterViewController.swift in Sources */,
+				B4B5FFC2239F756800D7659A /* WorkingRangeViewController.swift in Sources */,
+				B4B5FFDE239FA40500D7659A /* RemoveSectionController.swift in Sources */,
+				B4B5FFBA239F6D7600D7659A /* SingleSectionStoryboardViewController.swift in Sources */,
 				B430D1AB239668AB00053B77 /* SceneDelegate.swift in Sources */,
 				B43B4F56239DF17500392555 /* CalendarDayCell.swift in Sources */,
 				B49EC37B239A51F100A2538A /* User.swift in Sources */,
+				B4B5FFD9239FA2B900D7659A /* PersonSectionController.m in Sources */,
 				B43B4F5C239E3EB600392555 /* DisplaySectionController.swift in Sources */,
+				B4B5FFA0239F2F5200D7659A /* AnnouncingDepsViewController.swift in Sources */,
 				B43175BA2398E2A30093D0AA /* MZMomentsVC.m in Sources */,
 				B49EC388239A584D00A2538A /* DemoSectionController.swift in Sources */,
 				B49EC385239A577300A2538A /* MonthTitleViewModel.swift in Sources */,
+				B4B5FFB6239F6A9300D7659A /* SearchViewController.swift in Sources */,
+				B4B5FFB2239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m in Sources */,
 				B43B4F58239E36CE00392555 /* LoadMoreViewController.swift in Sources */,
 				B43175C02398F01A0093D0AA /* MZRefreshHeader.m in Sources */,
 				B43B4F5A239E3BF800392555 /* LabelSectionController.swift in Sources */,
 				B49EC36E2399EF8B00A2538A /* MZHeaderListSectionController.m in Sources */,
+				B4B5FFC5239F98C400D7659A /* PersonModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

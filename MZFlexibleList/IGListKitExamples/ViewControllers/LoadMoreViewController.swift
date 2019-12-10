@@ -26,10 +26,10 @@ class LoadMoreViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Tail Loading"
-        self.view.addSubview(collectionView)
+        self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.scrollViewDelegate = self
-        self.adapter.collectionView = collectionView
+        self.adapter.collectionView = self.collectionView
     }
     
     override func viewDidLayoutSubviews() {

@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     @objc private func btnClicked(btn: UIButton) {
         // let momentsVC = MZMomentsVC()
         let momentsVC = DemosViewController()
-        momentsVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(momentsVC, animated: true)
     }
 }

@@ -21,11 +21,12 @@ class LoadMoreViewController: UIViewController {
     lazy var items = Array(0...20)
     var loading = false
     let spinToken = "spinner"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Tail Loading"
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.scrollViewDelegate = self
@@ -49,8 +50,7 @@ extension LoadMoreViewController: ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if let obj = object as? String, obj == self.spinToken {
-            //return spinnerSectionController()
-            return LabelSectionController()
+            return spinnerSectionController()
         } else {
             return LabelSectionController()
         }
@@ -67,6 +67,7 @@ extension LoadMoreViewController: UIScrollViewDelegate {
         if !self.loading && distance < 200 {
             self.loading = true
             self.adapter.performUpdates(animated: true, completion: nil)
+            // 下拉刷新获取更多数据
             DispatchQueue.global(qos: .default).async {
                 // fake background loading task
                 sleep(2)

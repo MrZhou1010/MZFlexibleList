@@ -22,10 +22,12 @@ class DemoItem: NSObject {
 }
 
 extension DemoItem: ListDiffable {
+    /// 返回对象唯一id,在diff算法中以它作为元素存入哈希表的key
     func diffIdentifier() -> NSObjectProtocol {
         return self.name as NSObjectProtocol
     }
     
+    /// 判断两个对象是否相等,在diff算法用这个方法判断两个对象是否是同一个对象
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         if self === object {
             return true
@@ -65,7 +67,7 @@ class DemoSectionController: ListSectionController {
             self.viewController?.navigationController?.pushViewController(controller, animated: true)
         } else if let controller = self.object?.controllerClass.init() {
             controller.title = self.object?.name
-            viewController?.navigationController?.pushViewController(controller, animated: true)
+            self.viewController?.navigationController?.pushViewController(controller, animated: true)
         }
     }
 }

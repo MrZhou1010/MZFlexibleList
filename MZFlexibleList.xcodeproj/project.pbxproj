@@ -75,6 +75,31 @@
 		B4B5FFD9239FA2B900D7659A /* PersonSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFD8239FA2B900D7659A /* PersonSectionController.m */; };
 		B4B5FFDC239FA37E00D7659A /* PostSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFDB239FA37E00D7659A /* PostSectionController.m */; };
 		B4B5FFDE239FA40500D7659A /* RemoveSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */; };
+		B4C0CED623A086C0006BAAB0 /* ReorderableSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CED523A086C0006BAAB0 /* ReorderableSectionController.swift */; };
+		B4C0CED823A08706006BAAB0 /* SearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CED723A08706006BAAB0 /* SearchSectionController.swift */; };
+		B4C0CEDA23A08902006BAAB0 /* SelfSizingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CED923A08902006BAAB0 /* SelfSizingSectionController.swift */; };
+		B4C0CEDC23A08A78006BAAB0 /* StoryboardLabelSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEDB23A08A78006BAAB0 /* StoryboardLabelSectionController.swift */; };
+		B4C0CEDE23A08B06006BAAB0 /* UserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEDD23A08B06006BAAB0 /* UserSectionController.swift */; };
+		B4C0CEE023A08B72006BAAB0 /* WorkingRangeSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEDF23A08B72006BAAB0 /* WorkingRangeSectionController.swift */; };
+		B4C0CEE323A08E26006BAAB0 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEE223A08E26006BAAB0 /* CommentCell.m */; };
+		B4C0CEE623A08F01006BAAB0 /* InteractiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEE523A08F01006BAAB0 /* InteractiveCell.m */; };
+		B4C0CEE923A09048006BAAB0 /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEE823A09048006BAAB0 /* PersonCell.m */; };
+		B4C0CEEC23A09472006BAAB0 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEEB23A09472006BAAB0 /* PhotoCell.m */; };
+		B4C0CEEF23A094DD006BAAB0 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEEE23A094DD006BAAB0 /* UserInfoCell.m */; };
+		B4C0CEF123A09560006BAAB0 /* DetailLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEF023A09560006BAAB0 /* DetailLabelCell.swift */; };
+		B4C0CEF323A09618006BAAB0 /* EmbeddedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEF223A09618006BAAB0 /* EmbeddedCollectionViewCell.swift */; };
+		B4C0CEF523A09688006BAAB0 /* FullWidthSelfSizingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEF423A09688006BAAB0 /* FullWidthSelfSizingCell.swift */; };
+		B4C0CEF723A0975A006BAAB0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEF623A0975A006BAAB0 /* ImageCell.swift */; };
+		B4C0CEF923A098AE006BAAB0 /* ManuallySelfSizingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEF823A098AE006BAAB0 /* ManuallySelfSizingCell.swift */; };
+		B4C0CEFB23A09923006BAAB0 /* MonthTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEFA23A09923006BAAB0 /* MonthTitleCell.swift */; };
+		B4C0CEFE23A099C2006BAAB0 /* NibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CEFC23A099C2006BAAB0 /* NibCell.swift */; };
+		B4C0CEFF23A099C2006BAAB0 /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C0CEFD23A099C2006BAAB0 /* NibCell.xib */; };
+		B4C0CF0223A09A37006BAAB0 /* NibSelfSizingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0023A09A37006BAAB0 /* NibSelfSizingCell.swift */; };
+		B4C0CF0323A09A37006BAAB0 /* NibSelfSizingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C0CF0123A09A37006BAAB0 /* NibSelfSizingCell.xib */; };
+		B4C0CF0523A09ABF006BAAB0 /* RemoveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0423A09ABF006BAAB0 /* RemoveCell.swift */; };
+		B4C0CF0723A09B87006BAAB0 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0623A09B87006BAAB0 /* SearchCell.swift */; };
+		B4C0CF0923A09BD9006BAAB0 /* SpinnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0823A09BD9006BAAB0 /* SpinnerCell.swift */; };
+		B4C0CF0B23A09CF2006BAAB0 /* StoryboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0A23A09CF2006BAAB0 /* StoryboardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +209,36 @@
 		B4B5FFDA239FA37E00D7659A /* PostSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostSectionController.h; sourceTree = "<group>"; };
 		B4B5FFDB239FA37E00D7659A /* PostSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostSectionController.m; sourceTree = "<group>"; };
 		B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveSectionController.swift; sourceTree = "<group>"; };
+		B4C0CED523A086C0006BAAB0 /* ReorderableSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderableSectionController.swift; sourceTree = "<group>"; };
+		B4C0CED723A08706006BAAB0 /* SearchSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionController.swift; sourceTree = "<group>"; };
+		B4C0CED923A08902006BAAB0 /* SelfSizingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingSectionController.swift; sourceTree = "<group>"; };
+		B4C0CEDB23A08A78006BAAB0 /* StoryboardLabelSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLabelSectionController.swift; sourceTree = "<group>"; };
+		B4C0CEDD23A08B06006BAAB0 /* UserSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSectionController.swift; sourceTree = "<group>"; };
+		B4C0CEDF23A08B72006BAAB0 /* WorkingRangeSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingRangeSectionController.swift; sourceTree = "<group>"; };
+		B4C0CEE123A08E26006BAAB0 /* CommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		B4C0CEE223A08E26006BAAB0 /* CommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		B4C0CEE423A08F01006BAAB0 /* InteractiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveCell.h; sourceTree = "<group>"; };
+		B4C0CEE523A08F01006BAAB0 /* InteractiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveCell.m; sourceTree = "<group>"; };
+		B4C0CEE723A09048006BAAB0 /* PersonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
+		B4C0CEE823A09048006BAAB0 /* PersonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
+		B4C0CEEA23A09472006BAAB0 /* PhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		B4C0CEEB23A09472006BAAB0 /* PhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		B4C0CEED23A094DD006BAAB0 /* UserInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		B4C0CEEE23A094DD006BAAB0 /* UserInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		B4C0CEF023A09560006BAAB0 /* DetailLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabelCell.swift; sourceTree = "<group>"; };
+		B4C0CEF223A09618006BAAB0 /* EmbeddedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4C0CEF423A09688006BAAB0 /* FullWidthSelfSizingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidthSelfSizingCell.swift; sourceTree = "<group>"; };
+		B4C0CEF623A0975A006BAAB0 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		B4C0CEF823A098AE006BAAB0 /* ManuallySelfSizingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallySelfSizingCell.swift; sourceTree = "<group>"; };
+		B4C0CEFA23A09923006BAAB0 /* MonthTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTitleCell.swift; sourceTree = "<group>"; };
+		B4C0CEFC23A099C2006BAAB0 /* NibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibCell.swift; sourceTree = "<group>"; };
+		B4C0CEFD23A099C2006BAAB0 /* NibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibCell.xib; sourceTree = "<group>"; };
+		B4C0CF0023A09A37006BAAB0 /* NibSelfSizingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibSelfSizingCell.swift; sourceTree = "<group>"; };
+		B4C0CF0123A09A37006BAAB0 /* NibSelfSizingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibSelfSizingCell.xib; sourceTree = "<group>"; };
+		B4C0CF0423A09ABF006BAAB0 /* RemoveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCell.swift; sourceTree = "<group>"; };
+		B4C0CF0623A09B87006BAAB0 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		B4C0CF0823A09BD9006BAAB0 /* SpinnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerCell.swift; sourceTree = "<group>"; };
+		B4C0CF0A23A09CF2006BAAB0 /* StoryboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardCell.swift; sourceTree = "<group>"; };
 		C0AB4CF69C8140DE805DC0D3 /* Pods-MZFlexibleList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.debug.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4CF27F56F27DC8C59453BE /* Pods-MZFlexibleList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.release.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -413,6 +468,12 @@
 				B4B5FFDA239FA37E00D7659A /* PostSectionController.h */,
 				B4B5FFDB239FA37E00D7659A /* PostSectionController.m */,
 				B4B5FFDD239FA40500D7659A /* RemoveSectionController.swift */,
+				B4C0CED523A086C0006BAAB0 /* ReorderableSectionController.swift */,
+				B4C0CED723A08706006BAAB0 /* SearchSectionController.swift */,
+				B4C0CED923A08902006BAAB0 /* SelfSizingSectionController.swift */,
+				B4C0CEDB23A08A78006BAAB0 /* StoryboardLabelSectionController.swift */,
+				B4C0CEDD23A08B06006BAAB0 /* UserSectionController.swift */,
+				B4C0CEDF23A08B72006BAAB0 /* WorkingRangeSectionController.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -427,6 +488,30 @@
 				B43B4F68239E54C200392555 /* UserFooterView.xib */,
 				B43B4F6D239E564800392555 /* UserHeaderView.swift */,
 				B43B4F6E239E564800392555 /* UserHeaderView.xib */,
+				B4C0CEE123A08E26006BAAB0 /* CommentCell.h */,
+				B4C0CEE223A08E26006BAAB0 /* CommentCell.m */,
+				B4C0CEE423A08F01006BAAB0 /* InteractiveCell.h */,
+				B4C0CEE523A08F01006BAAB0 /* InteractiveCell.m */,
+				B4C0CEE723A09048006BAAB0 /* PersonCell.h */,
+				B4C0CEE823A09048006BAAB0 /* PersonCell.m */,
+				B4C0CEEA23A09472006BAAB0 /* PhotoCell.h */,
+				B4C0CEEB23A09472006BAAB0 /* PhotoCell.m */,
+				B4C0CEED23A094DD006BAAB0 /* UserInfoCell.h */,
+				B4C0CEEE23A094DD006BAAB0 /* UserInfoCell.m */,
+				B4C0CEF023A09560006BAAB0 /* DetailLabelCell.swift */,
+				B4C0CEF223A09618006BAAB0 /* EmbeddedCollectionViewCell.swift */,
+				B4C0CEF423A09688006BAAB0 /* FullWidthSelfSizingCell.swift */,
+				B4C0CEF623A0975A006BAAB0 /* ImageCell.swift */,
+				B4C0CEF823A098AE006BAAB0 /* ManuallySelfSizingCell.swift */,
+				B4C0CEFA23A09923006BAAB0 /* MonthTitleCell.swift */,
+				B4C0CEFC23A099C2006BAAB0 /* NibCell.swift */,
+				B4C0CEFD23A099C2006BAAB0 /* NibCell.xib */,
+				B4C0CF0023A09A37006BAAB0 /* NibSelfSizingCell.swift */,
+				B4C0CF0123A09A37006BAAB0 /* NibSelfSizingCell.xib */,
+				B4C0CF0423A09ABF006BAAB0 /* RemoveCell.swift */,
+				B4C0CF0623A09B87006BAAB0 /* SearchCell.swift */,
+				B4C0CF0823A09BD9006BAAB0 /* SpinnerCell.swift */,
+				B4C0CF0A23A09CF2006BAAB0 /* StoryboardCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -565,7 +650,9 @@
 				B43B4F70239E564800392555 /* UserHeaderView.xib in Resources */,
 				B430D1B5239668BE00053B77 /* LaunchScreen.storyboard in Resources */,
 				B430D1B2239668BE00053B77 /* Assets.xcassets in Resources */,
+				B4C0CF0323A09A37006BAAB0 /* NibSelfSizingCell.xib in Resources */,
 				B4B5FFCD239F9BC300D7659A /* Demo.storyboard in Resources */,
+				B4C0CEFF23A099C2006BAAB0 /* NibCell.xib in Resources */,
 				B43B4F6A239E54C200392555 /* UserFooterView.xib in Resources */,
 				B4B5FFC7239F9A7400D7659A /* PersonModel.value in Resources */,
 				B430D1B0239668AB00053B77 /* Main.storyboard in Resources */,
@@ -637,28 +724,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				B430D1AD239668AB00053B77 /* ViewController.swift in Sources */,
+				B4C0CED623A086C0006BAAB0 /* ReorderableSectionController.swift in Sources */,
 				B4B5FFBE239F71F300D7659A /* StoryboardViewController.swift in Sources */,
 				B49EC377239A410600A2538A /* MZContentListSectionController.m in Sources */,
 				B4B5FFAF239F4D2500D7659A /* ObjcDemoViewController.m in Sources */,
+				B4C0CEDA23A08902006BAAB0 /* SelfSizingSectionController.swift in Sources */,
+				B4C0CEFE23A099C2006BAAB0 /* NibCell.swift in Sources */,
 				B4B5FFB8239F6C6700D7659A /* SelfSizingCellsViewController.swift in Sources */,
 				B49EC37F239A551500A2538A /* Month.swift in Sources */,
 				B4B5FFA2239F329C00D7659A /* CalendarViewController.swift in Sources */,
+				B4C0CED823A08706006BAAB0 /* SearchSectionController.swift in Sources */,
 				B43B4F6F239E564800392555 /* UserHeaderView.swift in Sources */,
 				B49EC38B239A5C7400A2538A /* LabelCell.swift in Sources */,
+				B4C0CF0723A09B87006BAAB0 /* SearchCell.swift in Sources */,
 				B4B5FFDC239FA37E00D7659A /* PostSectionController.m in Sources */,
 				B4B5FFA8239F411D00D7659A /* EmptyViewController.swift in Sources */,
 				B4B5FFB4239F4F6D00D7659A /* ReorderableViewController.swift in Sources */,
 				B43B4F62239E465000392555 /* FeedItemSectionController.swift in Sources */,
+				B4C0CEF923A098AE006BAAB0 /* ManuallySelfSizingCell.swift in Sources */,
 				B49EC37D239A53E200A2538A /* SelectionModel.swift in Sources */,
 				B43B4F60239E447300392555 /* ExpandableSectionController.swift in Sources */,
 				B49EC3712399F26300A2538A /* MZHeaderCollectionViewCell.m in Sources */,
 				B4B5FFCA239F9ADF00D7659A /* Post.m in Sources */,
 				B430D1A9239668AB00053B77 /* AppDelegate.swift in Sources */,
+				B4C0CF0B23A09CF2006BAAB0 /* StoryboardCell.swift in Sources */,
 				B4B5FFD2239F9DC600D7659A /* HorizontalSectionController.swift in Sources */,
+				B4C0CEE623A08F01006BAAB0 /* InteractiveCell.m in Sources */,
 				B4B5FFBC239F6FD200D7659A /* SingleSectionViewController.swift in Sources */,
 				B43B4F64239E4D5200392555 /* GridSectionController.swift in Sources */,
 				B4B5FFA4239F34B500D7659A /* DiffTableViewController.swift in Sources */,
 				B43B4F69239E54C200392555 /* UserFooterView.swift in Sources */,
+				B4C0CEDE23A08B06006BAAB0 /* UserSectionController.swift in Sources */,
+				B4C0CEFB23A09923006BAAB0 /* MonthTitleCell.swift in Sources */,
+				B4C0CEEF23A094DD006BAAB0 /* UserInfoCell.m in Sources */,
+				B4C0CEF723A0975A006BAAB0 /* ImageCell.swift in Sources */,
+				B4C0CEF523A09688006BAAB0 /* FullWidthSelfSizingCell.swift in Sources */,
 				B43B4F54239DEB9A00392555 /* DemosViewController.swift in Sources */,
 				B4B5FFA6239F404600D7659A /* DisplayViewController.swift in Sources */,
 				B43175C32399090D0093D0AA /* MZListModel.m in Sources */,
@@ -668,6 +768,7 @@
 				B49EC383239A56DC00A2538A /* DayViewModel.swift in Sources */,
 				B43175BD2398E3880093D0AA /* MZNavigationView.m in Sources */,
 				B4B5FFAA239F446800D7659A /* MixedDataViewController.swift in Sources */,
+				B4C0CEEC23A09472006BAAB0 /* PhotoCell.m in Sources */,
 				B49EC381239A55B000A2538A /* FeedItem.swift in Sources */,
 				B4B5FFD4239F9F7400D7659A /* ListeningSectionController.swift in Sources */,
 				B49EC374239A2E4600A2538A /* MZContentCollectionViewCell.m in Sources */,
@@ -675,21 +776,30 @@
 				B4B5FFC0239F74A000D7659A /* SupplementaryViewController.swift in Sources */,
 				B4B5FFAC239F4B5800D7659A /* NestedAdapterViewController.swift in Sources */,
 				B4B5FFC2239F756800D7659A /* WorkingRangeViewController.swift in Sources */,
+				B4C0CEDC23A08A78006BAAB0 /* StoryboardLabelSectionController.swift in Sources */,
 				B4B5FFDE239FA40500D7659A /* RemoveSectionController.swift in Sources */,
+				B4C0CF0923A09BD9006BAAB0 /* SpinnerCell.swift in Sources */,
 				B4B5FFBA239F6D7600D7659A /* SingleSectionStoryboardViewController.swift in Sources */,
+				B4C0CEE023A08B72006BAAB0 /* WorkingRangeSectionController.swift in Sources */,
+				B4C0CEE923A09048006BAAB0 /* PersonCell.m in Sources */,
 				B430D1AB239668AB00053B77 /* SceneDelegate.swift in Sources */,
 				B43B4F56239DF17500392555 /* CalendarDayCell.swift in Sources */,
 				B49EC37B239A51F100A2538A /* User.swift in Sources */,
 				B4B5FFD9239FA2B900D7659A /* PersonSectionController.m in Sources */,
 				B43B4F5C239E3EB600392555 /* DisplaySectionController.swift in Sources */,
+				B4C0CF0523A09ABF006BAAB0 /* RemoveCell.swift in Sources */,
 				B4B5FFA0239F2F5200D7659A /* AnnouncingDepsViewController.swift in Sources */,
 				B43175BA2398E2A30093D0AA /* MZMomentsVC.m in Sources */,
 				B49EC388239A584D00A2538A /* DemoSectionController.swift in Sources */,
 				B49EC385239A577300A2538A /* MonthTitleViewModel.swift in Sources */,
+				B4C0CF0223A09A37006BAAB0 /* NibSelfSizingCell.swift in Sources */,
 				B4B5FFB6239F6A9300D7659A /* SearchViewController.swift in Sources */,
 				B4B5FFB2239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m in Sources */,
 				B43B4F58239E36CE00392555 /* LoadMoreViewController.swift in Sources */,
+				B4C0CEF123A09560006BAAB0 /* DetailLabelCell.swift in Sources */,
+				B4C0CEE323A08E26006BAAB0 /* CommentCell.m in Sources */,
 				B43175C02398F01A0093D0AA /* MZRefreshHeader.m in Sources */,
+				B4C0CEF323A09618006BAAB0 /* EmbeddedCollectionViewCell.swift in Sources */,
 				B43B4F5A239E3BF800392555 /* LabelSectionController.swift in Sources */,
 				B49EC36E2399EF8B00A2538A /* MZHeaderListSectionController.m in Sources */,
 				B4B5FFC5239F98C400D7659A /* PersonModel.m in Sources */,

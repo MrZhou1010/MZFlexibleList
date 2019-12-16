@@ -36,11 +36,12 @@ class SearchViewController: UIViewController {
     
     var filterString = ""
     
-    let searchToken: NSNumber = 42
-
+    let searchToken: NSNumber = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -52,6 +53,7 @@ class SearchViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension SearchViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         guard self.filterString != "" else {
@@ -67,7 +69,7 @@ extension SearchViewController: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        if let obj = object as? NSNumber, obj == searchToken {
+        if let obj = object as? NSNumber, obj == self.searchToken {
             let sectionController = SearchSectionController()
             sectionController.delegate = self
             return sectionController
@@ -81,6 +83,7 @@ extension SearchViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - SearchSectionControllerDelegate
 extension SearchViewController: SearchSectionControllerDelegate {
     func searchSectionController(_ sectionController: SearchSectionController, didChangeText text: String) {
         self.filterString = text

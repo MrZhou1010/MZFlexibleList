@@ -17,7 +17,7 @@ class ExpandableSectionController: ListSectionController {
     
     override func sizeForItem(at index: Int) -> CGSize {
         let width = self.collectionContext!.containerSize.width
-        let height = self.expanded ? LabelCell.textHeight(object ?? "", width: width) : LabelCell.singleLineHeight
+        let height = self.expanded ? LabelCell.textHeight(self.object ?? "", width: width) : LabelCell.singleLineHeight
         return CGSize(width: width, height: height)
     }
     
@@ -35,6 +35,7 @@ class ExpandableSectionController: ListSectionController {
     
     override func didSelectItem(at index: Int) {
         self.expanded = !self.expanded
+        // 扩大动画
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.6, options: [], animations: {
             self.collectionContext?.invalidateLayout(for: self, completion: nil)
         }, completion: nil)

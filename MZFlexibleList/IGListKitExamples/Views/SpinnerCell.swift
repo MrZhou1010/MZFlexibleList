@@ -9,12 +9,14 @@
 import UIKit
 import IGListKit
 
-func spinnerSectionController() -> ListSingleSectionController {
+func spinnerSectionController(object: String) -> ListSingleSectionController {
+    
     let configureBlock = { (item: Any, cell: UICollectionViewCell) in
         guard let cell = cell as? SpinnerCell else {
             return
         }
         cell.activityIndicator.startAnimating()
+        cell.loadingLbl.text = object
     }
     let sizeBlock = { (item: Any, context: ListCollectionContext?) -> CGSize in
         guard let context = context else {
@@ -26,16 +28,31 @@ func spinnerSectionController() -> ListSingleSectionController {
 }
 
 final class SpinnerCell: UICollectionViewCell {
-
+    
     lazy var activityIndicator: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView(style: .medium)
+        var view = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
+            view.style = .medium
+        } else {
+            view.style = .gray
+        }
         self.contentView.addSubview(view)
         return view
     }()
-
+    
+    lazy var loadingLbl: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.gray
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textAlignment = .left
+        self.contentView.addSubview(label)
+        return label
+    }()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let bounds = self.contentView.bounds
-        self.activityIndicator.center = CGPoint(x: bounds.midX, y: bounds.midY)
+        self.activityIndicator.center = CGPoint(x: bounds.midX - 20, y: bounds.midY)
+        self.loadingLbl.frame = CGRect(x: bounds.midX + 10, y: 0, width: bounds.width - (bounds.midX + 10), height: bounds.height)
     }
 }

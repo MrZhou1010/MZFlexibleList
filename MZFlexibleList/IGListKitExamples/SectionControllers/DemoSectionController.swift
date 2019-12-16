@@ -21,6 +21,7 @@ class DemoItem: NSObject {
     }
 }
 
+// MARK: - ListDiffable
 extension DemoItem: ListDiffable {
     /// 返回对象唯一id,在diff算法中以它作为元素存入哈希表的key
     func diffIdentifier() -> NSObjectProtocol {

@@ -39,6 +39,7 @@ class LoadMoreViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension LoadMoreViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects = self.items as [ListDiffable]
@@ -50,7 +51,7 @@ extension LoadMoreViewController: ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if let obj = object as? String, obj == self.spinToken {
-            return spinnerSectionController()
+            return spinnerSectionController(object: self.spinToken)
         } else {
             return LabelSectionController()
         }
@@ -61,13 +62,14 @@ extension LoadMoreViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - UIScrollViewDelegate
 extension LoadMoreViewController: UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let distance = scrollView.contentSize.height - (targetContentOffset.pointee.y + scrollView.bounds.height)
         if !self.loading && distance < 200 {
             self.loading = true
             self.adapter.performUpdates(animated: true, completion: nil)
-            // 下拉刷新获取更多数据
+            // 上拉刷新获取更多数据
             DispatchQueue.global(qos: .default).async {
                 // fake background loading task
                 sleep(2)

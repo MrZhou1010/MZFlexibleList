@@ -12,6 +12,9 @@ class SearchCell: UICollectionViewCell {
     
     lazy var searchBar: UISearchBar = {
         let view = UISearchBar()
+        view.searchBarStyle = .minimal
+        view.tintColor = UIColor.blue
+        view.placeholder = "Search"
         self.contentView.addSubview(view)
         return view
     }()

@@ -55,6 +55,7 @@ class DemosViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension DemosViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.demos
@@ -64,6 +65,7 @@ extension DemosViewController: ListAdapterDataSource {
         return DemoSectionController()
     }
     
+    // 空数据时显示的View
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }

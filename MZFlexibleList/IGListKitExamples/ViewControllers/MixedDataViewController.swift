@@ -15,6 +15,8 @@ class MixedDataViewController: UIViewController {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
     var data: [Any] = [
         "Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
         GridItem(color: UIColor(red: 237 / 255.0, green: 73 / 255.0, blue: 86 / 255.0, alpha: 1), itemCount: 6),
@@ -38,13 +40,11 @@ class MixedDataViewController: UIViewController {
     ]
     
     var selectedClass: Any.Type?
-    
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let control = UISegmentedControl(items: segments.map {
+        let control = UISegmentedControl(items: self.segments.map {
             return $0.0
         })
         control.selectedSegmentIndex = 0
@@ -54,7 +54,7 @@ class MixedDataViewController: UIViewController {
             let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(gesture:)))
             self.collectionView.addGestureRecognizer(longPressGesture)
         }
-        
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -95,6 +95,7 @@ class MixedDataViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension MixedDataViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         guard self.selectedClass != nil else {
@@ -103,6 +104,7 @@ extension MixedDataViewController: ListAdapterDataSource {
             }
         }
         return self.data.filter {
+            // 过滤数据
             type(of: $0) == self.selectedClass!
         }.map {
             $0 as! ListDiffable
@@ -125,6 +127,7 @@ extension MixedDataViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - ListAdapterMoveDelegate
 extension MixedDataViewController: ListAdapterMoveDelegate {
     func listAdapter(_ listAdapter: ListAdapter, move object: Any, from previousObjects: [Any], to objects: [Any]) {
         self.data = objects

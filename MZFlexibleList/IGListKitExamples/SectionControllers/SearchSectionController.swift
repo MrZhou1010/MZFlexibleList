@@ -16,16 +16,16 @@ protocol SearchSectionControllerDelegate: class {
 class SearchSectionController: ListSectionController, UISearchBarDelegate, ListScrollDelegate {
     
     weak var delegate: SearchSectionControllerDelegate?
-
+    
     override init() {
         super.init()
         self.scrollDelegate = self
     }
-
+    
     override func sizeForItem(at index: Int) -> CGSize {
         return CGSize(width: self.collectionContext!.containerSize.width, height: 44)
     }
-
+    
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         guard let cell = self.collectionContext?.dequeueReusableCell(of: SearchCell.self, for: self, at: index) as? SearchCell else {
             fatalError()
@@ -34,16 +34,16 @@ class SearchSectionController: ListSectionController, UISearchBarDelegate, ListS
         return cell
     }
     
-    /// MARK: UISearchBarDelegate
+    // MARK: - UISearchBarDelegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.delegate?.searchSectionController(self, didChangeText: searchText)
     }
-
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         self.delegate?.searchSectionController(self, didChangeText: searchBar.text!)
     }
     
-    /// MARK: ListScrollDelegate
+    // MARK: - ListScrollDelegate
     func listAdapter(_ listAdapter: ListAdapter, didScroll sectionController: ListSectionController) {
         if let searchBar = (self.collectionContext?.cellForItem(at: 0, sectionController: self) as? SearchCell)?.searchBar {
             searchBar.resignFirstResponder()

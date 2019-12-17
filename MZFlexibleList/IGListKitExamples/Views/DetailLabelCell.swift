@@ -10,6 +10,24 @@ import UIKit
 
 class DetailLabelCell: UICollectionViewCell {
     
+    public var title: String? {
+        get {
+            return self.titleLabel.text
+        }
+        set {
+            self.titleLabel.text = newValue
+        }
+    }
+    
+    public var detail: String? {
+        get {
+            return self.detailLabel.text
+        }
+        set {
+            self.detailLabel.text = newValue
+        }
+    }
+    
     fileprivate let padding: CGFloat = 15.0
     
     private lazy var titleLabel: UILabel = {
@@ -31,24 +49,6 @@ class DetailLabelCell: UICollectionViewCell {
         self.contentView.addSubview(view)
         return view
     }()
-    
-    public var title: String? {
-        get {
-            return self.titleLabel.text
-        }
-        set {
-            self.titleLabel.text = newValue
-        }
-    }
-    
-    public var detail: String? {
-        get {
-            return self.detailLabel.text
-        }
-        set {
-            self.detailLabel.text = newValue
-        }
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()

@@ -20,7 +20,7 @@ class CenterLabelCell: UICollectionViewCell {
         }
     }
     
-    lazy private var label: UILabel = {
+    private lazy var label: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textColor = .white

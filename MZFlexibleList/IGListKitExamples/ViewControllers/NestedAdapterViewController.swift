@@ -31,6 +31,7 @@ class NestedAdapterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -42,6 +43,7 @@ class NestedAdapterViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension NestedAdapterViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as! [ListDiffable]

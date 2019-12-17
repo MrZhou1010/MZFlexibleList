@@ -28,6 +28,7 @@ final class GridItem: NSObject {
     }
 }
 
+// MARK: - ListDiffable
 extension GridItem: ListDiffable {
     func diffIdentifier() -> NSObjectProtocol {
         return self
@@ -47,8 +48,8 @@ class GridSectionController: ListSectionController {
     required init(isReorderable: Bool = false) {
         self.isReorderable = isReorderable
         super.init()
-        self.minimumLineSpacing = 1.0
-        self.minimumInteritemSpacing = 1.0
+        self.minimumLineSpacing = 10.0
+        self.minimumInteritemSpacing = 10.0
     }
     
     override func numberOfItems() -> Int {
@@ -74,10 +75,12 @@ class GridSectionController: ListSectionController {
         self.object = object as? GridItem
     }
     
+    // 是否可以移动item
     override func canMoveItem(at index: Int) -> Bool {
         return self.isReorderable
     }
     
+    // 移动item
     override func moveObject(from sourceIndex: Int, to destinationIndex: Int) {
         guard let obj = self.object else {
             return

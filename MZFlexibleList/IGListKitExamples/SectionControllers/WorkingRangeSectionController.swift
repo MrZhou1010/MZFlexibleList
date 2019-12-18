@@ -57,7 +57,7 @@ class WorkingRangeSectionController: ListSectionController, ListWorkingRangeDele
         self.height = object as? Int
     }
     
-    /// MARK: ListWorkingRangeDelegate
+    // MARK: - ListWorkingRangeDelegate
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerWillEnterWorkingRange sectionController: ListSectionController) {
         guard self.downloadedImage == nil, self.task == nil, let urlString = self.urlString, let url = URL(string: urlString) else {
             return

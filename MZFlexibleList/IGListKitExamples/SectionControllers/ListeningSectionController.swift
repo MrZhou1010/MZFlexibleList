@@ -36,7 +36,7 @@ class ListeningSectionController: ListSectionController {
 }
 
 extension ListeningSectionController: IncrementListener {
-    // MARK: IncrementListener
+    // MARK: - IncrementListener
     func didIncrement(announcer: IncrementAnnouncer, value: Int) {
         self.value = value
         guard let cell = self.collectionContext?.cellForItem(at: 0, sectionController: self) as? LabelCell else {

@@ -29,7 +29,7 @@
     self.rotateImageView.frame = CGRectMake(30, 0, 30, 30);
 }
 
-#pragma mark -- 监听scrollView的contentOffset改变
+#pragma mark - 监听scrollView的contentOffset改变
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change {
     [super scrollViewContentOffsetDidChange:change];
     self.mj_y = -self.mj_h - self.ignoredScrollViewContentInsetTop;

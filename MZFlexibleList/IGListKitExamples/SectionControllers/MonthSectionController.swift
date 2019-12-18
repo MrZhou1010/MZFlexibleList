@@ -19,7 +19,7 @@ class MonthSectionController: ListBindingSectionController <ListDiffable>, ListB
         self.selectionDelegate = self
     }
 
-    /// MARK: ListBindingSectionControllerDataSource
+    // MARK: - ListBindingSectionControllerDataSource
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, viewModelsFor object: Any) -> [ListDiffable] {
         guard let month = object as? Month else {
             return []
@@ -68,7 +68,7 @@ class MonthSectionController: ListBindingSectionController <ListDiffable>, ListB
         }
     }
 
-    // MARK: ListBindingSectionControllerSelectionDelegate
+    // MARK: - ListBindingSectionControllerSelectionDelegate
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, didSelectItemAt index: Int, viewModel: Any) {
         guard let dayViewModel = viewModel as? DayViewModel else { return }
         if dayViewModel.day == self.selectedDay {

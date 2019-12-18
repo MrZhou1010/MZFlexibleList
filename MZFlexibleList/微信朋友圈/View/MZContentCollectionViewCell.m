@@ -85,7 +85,7 @@
     [self addSubview:self.photoCollectionView];
 }
 
-#pragma -- lazy
+#pragma - lazy
 - (UIImageView *)avatarView {
     if (!_avatarView) {
         _avatarView = [[UIImageView alloc] init];

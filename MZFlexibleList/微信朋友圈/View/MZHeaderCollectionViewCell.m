@@ -32,7 +32,7 @@
     [self addSubview:self.headUserNameLbl];
 }
 
-#pragma -- lazy
+#pragma - lazy
 - (UIImageView *)headImageView {
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc] init];

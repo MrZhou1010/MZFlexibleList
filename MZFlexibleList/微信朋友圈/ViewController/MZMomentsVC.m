@@ -28,7 +28,7 @@
 
 @implementation MZMomentsVC
 
-#pragma mark -- lazy
+#pragma mark - lazy
 - (MZNavigationView *)navView {
     if (!_navView) {
         _navView = [[MZNavigationView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, STATUSNAVHEIGHT)];
@@ -101,12 +101,12 @@
     }];
 }
 
-#pragma mark -- UIScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.navView showNavigationViewWithAlpha:scrollView.contentOffset.y / 150];
 }
 
-#pragma mark -- IGListAdapterDelegate, IGListAdapterDataSource
+#pragma mark - IGListAdapterDelegate, IGListAdapterDataSource
 - (nullable UIView *)emptyViewForListAdapter:(nonnull IGListAdapter *)listAdapter {
     UIView *emptyView = [[UIView alloc] init];
     emptyView.backgroundColor = [UIColor lightGrayColor];

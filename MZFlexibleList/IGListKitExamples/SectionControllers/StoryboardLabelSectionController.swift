@@ -19,6 +19,11 @@ class StoryboardLabelSectionController: ListSectionController {
     
     weak var delegate: StoryboardLabelSectionControllerDelegate?
     
+    override init() {
+        super.init()
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 10)
+    }
+    
     override func sizeForItem(at index: Int) -> CGSize {
         return CGSize(width: (self.object?.name.count)! * 7, height: (self.object?.name.count)! * 7)
     }

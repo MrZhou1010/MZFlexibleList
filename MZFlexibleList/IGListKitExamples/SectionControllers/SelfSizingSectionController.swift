@@ -15,7 +15,7 @@ class SelfSizingSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
         self.minimumLineSpacing = 4.0
         self.minimumInteritemSpacing = 4.0
     }
@@ -31,21 +31,21 @@ class SelfSizingSectionController: ListSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let text = self.model.options[index]
         let cell: UICollectionViewCell
-        switch model.type {
+        switch self.model.type {
         case .none:
-            guard let manualCell = collectionContext?.dequeueReusableCell(of: ManuallySelfSizingCell.self, for: self, at: index) as? ManuallySelfSizingCell else {
+            guard let manualCell = self.collectionContext?.dequeueReusableCell(of: ManuallySelfSizingCell.self, for: self, at: index) as? ManuallySelfSizingCell else {
                 fatalError()
             }
             manualCell.text = text
             cell = manualCell
         case .fullWidth:
-            guard let manualCell = collectionContext?.dequeueReusableCell(of: FullWidthSelfSizingCell.self, for: self, at: index) as? FullWidthSelfSizingCell else {
+            guard let fullCell = self.collectionContext?.dequeueReusableCell(of: FullWidthSelfSizingCell.self, for: self, at: index) as? FullWidthSelfSizingCell else {
                 fatalError()
             }
-            manualCell.text = text
-            cell = manualCell
+            fullCell.text = text
+            cell = fullCell
         case .nib:
-            guard let nibCell = collectionContext?.dequeueReusableCell(withNibName: "NibSelfSizingCell", bundle: nil, for: self, at: index) as? NibSelfSizingCell else {
+            guard let nibCell = self.collectionContext?.dequeueReusableCell(withNibName: "NibSelfSizingCell", bundle: nil, for: self, at: index) as? NibSelfSizingCell else {
                 fatalError()
             }
             nibCell.contentLabel.text = text

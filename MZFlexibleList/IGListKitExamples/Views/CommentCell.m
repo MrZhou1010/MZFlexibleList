@@ -47,7 +47,7 @@
 
 - (void)setComment:(NSString *)comment {
     _comment = [comment copy];
-    self.commentLabel.text = _comment;
+    self.commentLabel.text = comment;
 }
 
 @end

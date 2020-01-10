@@ -19,7 +19,7 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "DisplayView"
+        self.collectionView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -31,6 +31,7 @@ class DisplayViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension DisplayViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return [1, 2, 3, 4, 5, 6] as [NSNumber]

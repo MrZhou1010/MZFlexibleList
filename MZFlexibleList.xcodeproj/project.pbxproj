@@ -100,6 +100,11 @@
 		B4C0CF0723A09B87006BAAB0 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0623A09B87006BAAB0 /* SearchCell.swift */; };
 		B4C0CF0923A09BD9006BAAB0 /* SpinnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0823A09BD9006BAAB0 /* SpinnerCell.swift */; };
 		B4C0CF0B23A09CF2006BAAB0 /* StoryboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0CF0A23A09CF2006BAAB0 /* StoryboardCell.swift */; };
+		B4E216FF23C6D79000AA6DB0 /* MZLoctionListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E216FE23C6D79000AA6DB0 /* MZLoctionListSectionController.m */; };
+		B4E2170223C6D80700AA6DB0 /* MZLoctionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2170123C6D80700AA6DB0 /* MZLoctionCollectionViewCell.m */; };
+		B4E2170723C6FB3300AA6DB0 /* IGListStackedSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2170423C6FB3300AA6DB0 /* IGListStackedSectionController.m */; };
+		B4E2170A23C7009B00AA6DB0 /* MZTimeListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2170923C7009B00AA6DB0 /* MZTimeListSectionController.m */; };
+		B4E2170D23C700B900AA6DB0 /* MZTimeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E2170C23C700B900AA6DB0 /* MZTimeCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +244,17 @@
 		B4C0CF0623A09B87006BAAB0 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		B4C0CF0823A09BD9006BAAB0 /* SpinnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerCell.swift; sourceTree = "<group>"; };
 		B4C0CF0A23A09CF2006BAAB0 /* StoryboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardCell.swift; sourceTree = "<group>"; };
+		B4E216FD23C6D79000AA6DB0 /* MZLoctionListSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoctionListSectionController.h; sourceTree = "<group>"; };
+		B4E216FE23C6D79000AA6DB0 /* MZLoctionListSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoctionListSectionController.m; sourceTree = "<group>"; };
+		B4E2170023C6D80700AA6DB0 /* MZLoctionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoctionCollectionViewCell.h; sourceTree = "<group>"; };
+		B4E2170123C6D80700AA6DB0 /* MZLoctionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoctionCollectionViewCell.m; sourceTree = "<group>"; };
+		B4E2170423C6FB3300AA6DB0 /* IGListStackedSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGListStackedSectionController.m; sourceTree = "<group>"; };
+		B4E2170523C6FB3300AA6DB0 /* IGListStackedSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListStackedSectionController.h; sourceTree = "<group>"; };
+		B4E2170623C6FB3300AA6DB0 /* IGListStackedSectionControllerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGListStackedSectionControllerInternal.h; sourceTree = "<group>"; };
+		B4E2170823C7009B00AA6DB0 /* MZTimeListSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTimeListSectionController.h; sourceTree = "<group>"; };
+		B4E2170923C7009B00AA6DB0 /* MZTimeListSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTimeListSectionController.m; sourceTree = "<group>"; };
+		B4E2170B23C700B900AA6DB0 /* MZTimeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTimeCollectionViewCell.h; sourceTree = "<group>"; };
+		B4E2170C23C700B900AA6DB0 /* MZTimeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTimeCollectionViewCell.m; sourceTree = "<group>"; };
 		C0AB4CF69C8140DE805DC0D3 /* Pods-MZFlexibleList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.debug.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4CF27F56F27DC8C59453BE /* Pods-MZFlexibleList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZFlexibleList.release.xcconfig"; path = "Target Support Files/Pods-MZFlexibleList/Pods-MZFlexibleList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -303,6 +319,7 @@
 		B430D1A7239668AB00053B77 /* MZFlexibleList */ = {
 			isa = PBXGroup;
 			children = (
+				B4E2170323C6FAD500AA6DB0 /* IGListStackedSectionController */,
 				B49EC378239A50BD00A2538A /* IGListKitExamples */,
 				B43175B32398B36F0093D0AA /* 微信朋友圈 */,
 				B430D1A8239668AB00053B77 /* AppDelegate.swift */,
@@ -366,6 +383,10 @@
 				B49EC3702399F26300A2538A /* MZHeaderCollectionViewCell.m */,
 				B49EC372239A2E4600A2538A /* MZContentCollectionViewCell.h */,
 				B49EC373239A2E4600A2538A /* MZContentCollectionViewCell.m */,
+				B4E2170023C6D80700AA6DB0 /* MZLoctionCollectionViewCell.h */,
+				B4E2170123C6D80700AA6DB0 /* MZLoctionCollectionViewCell.m */,
+				B4E2170B23C700B900AA6DB0 /* MZTimeCollectionViewCell.h */,
+				B4E2170C23C700B900AA6DB0 /* MZTimeCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +400,10 @@
 				B49EC36D2399EF8B00A2538A /* MZHeaderListSectionController.m */,
 				B49EC375239A410600A2538A /* MZContentListSectionController.h */,
 				B49EC376239A410600A2538A /* MZContentListSectionController.m */,
+				B4E216FD23C6D79000AA6DB0 /* MZLoctionListSectionController.h */,
+				B4E216FE23C6D79000AA6DB0 /* MZLoctionListSectionController.m */,
+				B4E2170823C7009B00AA6DB0 /* MZTimeListSectionController.h */,
+				B4E2170923C7009B00AA6DB0 /* MZTimeListSectionController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -530,6 +555,16 @@
 				B4B5FFCF239F9C6700D7659A /* IncrementAnnouncer.swift */,
 			);
 			path = Systems;
+			sourceTree = "<group>";
+		};
+		B4E2170323C6FAD500AA6DB0 /* IGListStackedSectionController */ = {
+			isa = PBXGroup;
+			children = (
+				B4E2170523C6FB3300AA6DB0 /* IGListStackedSectionController.h */,
+				B4E2170423C6FB3300AA6DB0 /* IGListStackedSectionController.m */,
+				B4E2170623C6FB3300AA6DB0 /* IGListStackedSectionControllerInternal.h */,
+			);
+			path = IGListStackedSectionController;
 			sourceTree = "<group>";
 		};
 		FB6B6D0495CEE2617019F665 /* Frameworks */ = {
@@ -733,6 +768,7 @@
 				B4B5FFB8239F6C6700D7659A /* SelfSizingCellsViewController.swift in Sources */,
 				B49EC37F239A551500A2538A /* Month.swift in Sources */,
 				B4B5FFA2239F329C00D7659A /* CalendarViewController.swift in Sources */,
+				B4E2170723C6FB3300AA6DB0 /* IGListStackedSectionController.m in Sources */,
 				B4C0CED823A08706006BAAB0 /* SearchSectionController.swift in Sources */,
 				B43B4F6F239E564800392555 /* UserHeaderView.swift in Sources */,
 				B49EC38B239A5C7400A2538A /* LabelCell.swift in Sources */,
@@ -745,6 +781,7 @@
 				B49EC37D239A53E200A2538A /* SelectionModel.swift in Sources */,
 				B43B4F60239E447300392555 /* ExpandableSectionController.swift in Sources */,
 				B49EC3712399F26300A2538A /* MZHeaderCollectionViewCell.m in Sources */,
+				B4E216FF23C6D79000AA6DB0 /* MZLoctionListSectionController.m in Sources */,
 				B4B5FFCA239F9ADF00D7659A /* Post.m in Sources */,
 				B430D1A9239668AB00053B77 /* AppDelegate.swift in Sources */,
 				B4C0CF0B23A09CF2006BAAB0 /* StoryboardCell.swift in Sources */,
@@ -756,6 +793,7 @@
 				B43B4F69239E54C200392555 /* UserFooterView.swift in Sources */,
 				B4C0CEDE23A08B06006BAAB0 /* UserSectionController.swift in Sources */,
 				B4C0CEFB23A09923006BAAB0 /* MonthTitleCell.swift in Sources */,
+				B4E2170A23C7009B00AA6DB0 /* MZTimeListSectionController.m in Sources */,
 				B4C0CEEF23A094DD006BAAB0 /* UserInfoCell.m in Sources */,
 				B4C0CEF723A0975A006BAAB0 /* ImageCell.swift in Sources */,
 				B4C0CEF523A09688006BAAB0 /* FullWidthSelfSizingCell.swift in Sources */,
@@ -794,12 +832,14 @@
 				B49EC385239A577300A2538A /* MonthTitleViewModel.swift in Sources */,
 				B4C0CF0223A09A37006BAAB0 /* NibSelfSizingCell.swift in Sources */,
 				B4B5FFB6239F6A9300D7659A /* SearchViewController.swift in Sources */,
+				B4E2170D23C700B900AA6DB0 /* MZTimeCollectionViewCell.m in Sources */,
 				B4B5FFB2239F4E4300D7659A /* ObjcGeneratedModelDemoViewController.m in Sources */,
 				B43B4F58239E36CE00392555 /* LoadMoreViewController.swift in Sources */,
 				B4C0CEF123A09560006BAAB0 /* DetailLabelCell.swift in Sources */,
 				B4C0CEE323A08E26006BAAB0 /* CommentCell.m in Sources */,
 				B43175C02398F01A0093D0AA /* MZRefreshHeader.m in Sources */,
 				B4C0CEF323A09618006BAAB0 /* EmbeddedCollectionViewCell.swift in Sources */,
+				B4E2170223C6D80700AA6DB0 /* MZLoctionCollectionViewCell.m in Sources */,
 				B43B4F5A239E3BF800392555 /* LabelSectionController.swift in Sources */,
 				B49EC36E2399EF8B00A2538A /* MZHeaderListSectionController.m in Sources */,
 				B4B5FFC5239F98C400D7659A /* PersonModel.m in Sources */,
@@ -978,7 +1018,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4GKD84VMPR;
 				INFOPLIST_FILE = MZFlexibleList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1002,7 +1042,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4GKD84VMPR;
 				INFOPLIST_FILE = MZFlexibleList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

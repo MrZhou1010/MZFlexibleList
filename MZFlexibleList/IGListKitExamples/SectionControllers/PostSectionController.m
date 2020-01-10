@@ -25,7 +25,7 @@ static NSInteger cellsBeforeComments = 3;
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
     const CGFloat width = self.collectionContext.containerSize.width;
-    CGFloat height;
+    CGFloat height = 0.0;
     if (index == 0 || index == 2) {
         height = 41.0;
     } else if (index == 1) {

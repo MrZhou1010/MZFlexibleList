@@ -75,7 +75,7 @@ extension LoadMoreViewController: UIScrollViewDelegate {
                 DispatchQueue.main.async {
                     self.loading = false
                     let itemCount = self.items.count
-                    self.items.append(contentsOf: Array(itemCount..<itemCount + 5))
+                    self.items.append(contentsOf: Array(itemCount ..< itemCount + 5))
                     self.adapter.performUpdates(animated: true, completion: nil)
                 }
             }

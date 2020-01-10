@@ -78,7 +78,7 @@ class LabelCell: UICollectionViewCell {
     }
 }
 
-
+// MARK: - ListBindable
 extension LabelCell: ListBindable {
     public func bindViewModel(_ viewModel: Any) {
         guard let viewModel = viewModel as? String else {

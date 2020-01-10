@@ -18,7 +18,7 @@ class AnnouncingDepsViewController: UIViewController {
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let data: [NSNumber] = Array(0..<20).map {
+    let data: [NSNumber] = Array(0 ..< 20).map {
         NSNumber(value: $0)
     }
     
@@ -27,7 +27,6 @@ class AnnouncingDepsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Announcer"
         self.collectionView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self

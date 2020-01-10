@@ -28,7 +28,7 @@ class MonthSectionController: ListBindingSectionController <ListDiffable>, ListB
         let today = Calendar.current.component(.day, from: date)
         var viewModels = [ListDiffable]()
         viewModels.append(MonthTitleViewModel(name: month.name))
-        for day in 1..<(month.days + 1) {
+        for day in 1 ..< (month.days + 1) {
             let viewModel = DayViewModel(day: day, today: day == today, selected: day == self.selectedDay, appointments: month.appointments[day]?.count ?? 0)
             viewModels.append(viewModel)
         }
@@ -53,7 +53,7 @@ class MonthSectionController: ListBindingSectionController <ListDiffable>, ListB
         }
         return cell
     }
-
+    
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, sizeForViewModel viewModel: Any, at index: Int) -> CGSize {
         guard let width = self.collectionContext?.containerSize.width else {
             return .zero
@@ -70,7 +70,9 @@ class MonthSectionController: ListBindingSectionController <ListDiffable>, ListB
 
     // MARK: - ListBindingSectionControllerSelectionDelegate
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, didSelectItemAt index: Int, viewModel: Any) {
-        guard let dayViewModel = viewModel as? DayViewModel else { return }
+        guard let dayViewModel = viewModel as? DayViewModel else {
+            return
+        }
         if dayViewModel.day == self.selectedDay {
             self.selectedDay = -1
         } else {

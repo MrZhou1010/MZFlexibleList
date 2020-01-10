@@ -23,11 +23,8 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Calendar"
-        
         let date = Date()
         let currentMonth = Calendar.current.component(.month, from: date)
-        
         let month = Month(
             name: DateFormatter().monthSymbols[currentMonth - 1],
             days: 30,
@@ -45,7 +42,7 @@ class CalendarViewController: UIViewController {
             ]
         )
         self.months.append(month)
-        
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -57,6 +54,7 @@ class CalendarViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension CalendarViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.months

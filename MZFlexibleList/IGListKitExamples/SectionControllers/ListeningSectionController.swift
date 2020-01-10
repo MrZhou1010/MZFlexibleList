@@ -19,7 +19,7 @@ class ListeningSectionController: ListSectionController {
     }
 
     func configureCell(cell: LabelCell) {
-        cell.text = "Section: \(self.section), value: \(value)"
+        cell.text = "Section: \(self.section), value: \(self.value)"
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
@@ -35,8 +35,8 @@ class ListeningSectionController: ListSectionController {
     }
 }
 
+// MARK: - IncrementListener
 extension ListeningSectionController: IncrementListener {
-    // MARK: - IncrementListener
     func didIncrement(announcer: IncrementAnnouncer, value: Int) {
         self.value = value
         guard let cell = self.collectionContext?.cellForItem(at: 0, sectionController: self) as? LabelCell else {

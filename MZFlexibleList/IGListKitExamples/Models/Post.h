@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Post : NSObject <IGListDiffable>
 
-@property (nonatomic, strong, readonly) NSString *username;
-@property (nonatomic, strong, readonly) NSArray<NSString *> *comments;
+@property (nonatomic, copy, readonly) NSString *username;
+@property (nonatomic, copy, readonly) NSArray<NSString *> *comments;
 
 - (instancetype)initWithUsername:(NSString *)username comments:(NSArray<NSString *> *)comments NS_DESIGNATED_INITIALIZER;
 

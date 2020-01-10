@@ -17,11 +17,12 @@ class SingleSectionViewController: UIViewController {
 
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
-    let data = Array(0..<20)
+    let data = Array(0 ..< 20)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -33,6 +34,7 @@ class SingleSectionViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension SingleSectionViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]
@@ -47,7 +49,7 @@ extension SingleSectionViewController: ListAdapterDataSource {
         }
         let sizeBlock = { (item: Any, context: ListCollectionContext?) -> CGSize in
             guard let context = context else {
-                return CGSize()
+                return .zero
             }
             return CGSize(width: context.containerSize.width, height: 44)
         }
@@ -61,11 +63,16 @@ extension SingleSectionViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - ListSingleSectionControllerDelegate
 extension SingleSectionViewController: ListSingleSectionControllerDelegate {
     func didSelect(_ sectionController: ListSingleSectionController, with object: Any) {
         let section = self.adapter.section(for: sectionController) + 1
-        let alert = UIAlertController(title: "Section \(section) was selected \u{1F389}", message: "Cell Object: " + String(describing: object), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let alertVC = UIAlertController(title: "Section \(section) was selected \u{1F389}", message: "Cell Object: " + String(describing: object), preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func didDeselect(_ sectionController: ListSingleSectionController, with object: Any) {
+       
     }
 }

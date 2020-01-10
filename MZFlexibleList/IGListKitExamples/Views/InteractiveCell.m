@@ -36,28 +36,24 @@
 - (void)setupSubviews {
     UIColor *buttonTitleColor = [UIColor colorWithRed:28.0 / 255.0 green:30.0 / 255.0 blue:28.0 / 255.0 alpha:1.0];
     UIFont *titleFont = [UIFont systemFontOfSize:12.0];
-    
     self.likeButton = [[UIButton alloc] init];
     [self.likeButton setTitle:@"Like" forState:UIControlStateNormal];
     [self.likeButton setTitleColor:buttonTitleColor forState:UIControlStateNormal];
     [self.likeButton.titleLabel setFont:titleFont];
     [self.likeButton sizeToFit];
     [self.contentView addSubview:self.likeButton];
-    
     self.commentButton = [[UIButton alloc] init];
     [self.commentButton setTitle:@"Comment" forState:UIControlStateNormal];
     [self.commentButton setTitleColor:buttonTitleColor forState:UIControlStateNormal];
     [self.commentButton.titleLabel setFont:titleFont];
     [self.commentButton sizeToFit];
     [self.contentView addSubview:self.commentButton];
-    
     self.shareButton = [[UIButton alloc] init];
     [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
     [self.shareButton setTitleColor:buttonTitleColor forState:UIControlStateNormal];
     [self.shareButton.titleLabel setFont:titleFont];
     [self.shareButton sizeToFit];
     [self.contentView addSubview:self.shareButton];
-    
     self.separator = [[CALayer alloc] init];
     self.separator.backgroundColor = [UIColor colorWithRed:200.0 / 255.0 green:199.0 / 255.0 blue:204.0 / 255.0 alpha:1.0].CGColor;
     [self.contentView.layer addSublayer:self.separator];

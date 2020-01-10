@@ -58,6 +58,7 @@ class StoryboardViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension StoryboardViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.people
@@ -74,6 +75,7 @@ extension StoryboardViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - StoryboardLabelSectionControllerDelegate
 extension StoryboardViewController: StoryboardLabelSectionControllerDelegate {
     func removeSectionControllerWantsRemoved(_ sectionController: StoryboardLabelSectionController) {
         let section = self.adapter.section(for: sectionController)

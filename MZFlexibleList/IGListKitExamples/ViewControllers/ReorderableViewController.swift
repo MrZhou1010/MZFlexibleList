@@ -17,7 +17,7 @@ class ReorderableViewController: UIViewController {
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    var data = Array(0..<20).map {
+    var data = Array(0 ..< 20).map {
         "Cell: \($0 + 1)"
     }
     
@@ -28,6 +28,7 @@ class ReorderableViewController: UIViewController {
             let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture(gesture:)))
             self.collectionView.addGestureRecognizer(longPressGesture)
         }
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -63,6 +64,7 @@ class ReorderableViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension ReorderableViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]
@@ -77,6 +79,7 @@ extension ReorderableViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - ListAdapterMoveDelegate
 extension ReorderableViewController: ListAdapterMoveDelegate {
     func listAdapter(_ listAdapter: ListAdapter, move object: Any, from previousObjects: [Any], to objects: [Any]) {
         guard let objects = objects as? [String] else {

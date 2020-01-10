@@ -33,7 +33,6 @@ class EmptyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "DisplayView"
         self.collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1)
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
@@ -47,12 +46,13 @@ class EmptyViewController: UIViewController {
     }
 
     @objc func onAdd() {
-        self.data.append(tally + 1)
+        self.data.append(self.tally + 1)
         self.tally += 1
         self.adapter.performUpdates(animated: true, completion: nil)
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension EmptyViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]
@@ -69,10 +69,11 @@ extension EmptyViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - RemoveSectionControllerDelegate
 extension EmptyViewController: RemoveSectionControllerDelegate {
     func removeSectionControllerWantsRemoved(_ sectionController: RemoveSectionController) {
         let section = self.adapter.section(for: sectionController)
-        guard let obj = self.adapter.object(atSection: section) as? Int, let index = data.index(of: obj) else {
+        guard let obj = self.adapter.object(atSection: section) as? Int, let index = self.data.firstIndex(of: obj) else {
             return
         }
         self.data.remove(at: index)

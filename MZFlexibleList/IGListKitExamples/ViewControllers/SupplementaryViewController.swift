@@ -25,6 +25,7 @@ class SupplementaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -36,6 +37,7 @@ class SupplementaryViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension SupplementaryViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.feedItems

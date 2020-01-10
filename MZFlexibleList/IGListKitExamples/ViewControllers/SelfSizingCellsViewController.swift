@@ -51,6 +51,7 @@ class SelfSizingCellsViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension SelfSizingCellsViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]

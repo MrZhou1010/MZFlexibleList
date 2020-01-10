@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZHeaderCollectionViewCell : UICollectionViewCell<IGListBindable>
+@interface MZHeaderCollectionViewCell : UICollectionViewCell <IGListBindable>
 
 - (void)bindViewModel:(MZListModel *)listModel;
 

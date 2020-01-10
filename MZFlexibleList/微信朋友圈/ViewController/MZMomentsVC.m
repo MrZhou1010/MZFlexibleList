@@ -9,6 +9,9 @@
 #import "MZMomentsVC.h"
 #import "MZHeaderListSectionController.h"
 #import "MZContentListSectionController.h"
+#import "MZLoctionListSectionController.h"
+#import "MZTimeListSectionController.h"
+#import "IGListStackedSectionController.h"
 #import "MZNavigationView.h"
 #import "MZRefreshHeader.h"
 #import "MZListModel.h"
@@ -64,13 +67,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.listModels = [NSMutableArray array];
-    
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.navView];
     [self initListData];
     [self addRefreshHeader];
     //[self addRefreshFooter];
     self.adapter.collectionView = self.collectionView;
+    __weak typeof(self) weakSelf = self;
+    self.navView.backBtnActionBlock = ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.navigationController popViewControllerAnimated:YES];
+    };
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -119,8 +136,11 @@
         MZHeaderListSectionController *sectionController = [[MZHeaderListSectionController alloc] init];
         return sectionController;
     } else {
-        MZContentListSectionController *sectionController = [[MZContentListSectionController alloc] init];
-        return sectionController;
+        MZContentListSectionController *contentSC = [[MZContentListSectionController alloc] init];
+        MZLoctionListSectionController *loctionSC = [[MZLoctionListSectionController alloc] init];
+        MZTimeListSectionController *timeSC = [[MZTimeListSectionController alloc] init];
+        IGListStackedSectionController *stackSC = [[IGListStackedSectionController alloc] initWithSectionControllers:@[contentSC, loctionSC, timeSC]];
+        return stackSC;
     }
 }
 

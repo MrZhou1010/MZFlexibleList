@@ -31,7 +31,6 @@ class FullWidthSelfSizingCell: UICollectionViewCell {
         super.init(frame: frame)
         self.contentView.backgroundColor = .white
         self.contentView.addSubview(self.label)
-
         NSLayoutConstraint(item: self.label,
                            attribute: .top,
                            relatedBy: .equal,

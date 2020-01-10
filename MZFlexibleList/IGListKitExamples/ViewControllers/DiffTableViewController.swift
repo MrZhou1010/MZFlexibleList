@@ -62,8 +62,7 @@ class DiffTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "DiffTableView"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(onDiff))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(onDiff))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
     }
     

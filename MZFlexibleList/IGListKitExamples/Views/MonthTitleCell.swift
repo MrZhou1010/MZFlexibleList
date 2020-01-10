@@ -36,6 +36,7 @@ class MonthTitleCell: UICollectionViewCell {
     }
 }
 
+// MARK: - ListBindable
 extension MonthTitleCell: ListBindable {
     func bindViewModel(_ viewModel: Any) {
         guard let viewModel = viewModel as? MonthTitleViewModel else {

@@ -27,16 +27,16 @@
 }
 
 - (void)setupUI {
-    [self addSubview:self.headImageView];
-    [self addSubview:self.headAvatarView];
-    [self addSubview:self.headUserNameLbl];
+    [self.contentView addSubview:self.headImageView];
+    [self.contentView addSubview:self.headAvatarView];
+    [self.contentView addSubview:self.headUserNameLbl];
 }
 
-#pragma - lazy
+#pragma mark - lazy
 - (UIImageView *)headImageView {
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc] init];
-        _headImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - 60);
+        _headImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height - 60.0);
         _headImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _headImageView;
@@ -45,7 +45,7 @@
 - (UIImageView *)headAvatarView {
     if (!_headAvatarView) {
         _headAvatarView = [[UIImageView alloc] init];
-        _headAvatarView.frame = CGRectMake(self.bounds.size.width - 96, self.bounds.size.height - 120, 80, 80);
+        _headAvatarView.frame = CGRectMake(self.bounds.size.width - 96.0, self.bounds.size.height - 120.0, 80.0, 80.0);
         _headAvatarView.contentMode = UIViewContentModeScaleAspectFill;
         _headAvatarView.layer.cornerRadius = 10;
         _headAvatarView.layer.masksToBounds = YES;
@@ -56,7 +56,7 @@
 - (UILabel *)headUserNameLbl {
     if (!_headUserNameLbl) {
         _headUserNameLbl = [[UILabel alloc] init];
-        _headUserNameLbl.frame = CGRectMake(0, CGRectGetMinY(self.headAvatarView.frame), CGRectGetMinX(self.headAvatarView.frame) - 16, CGRectGetWidth(self.headAvatarView.frame) - 20);
+        _headUserNameLbl.frame = CGRectMake(0, CGRectGetMinY(self.headAvatarView.frame), CGRectGetMinX(self.headAvatarView.frame) - 16.0, CGRectGetWidth(self.headAvatarView.frame) - 20.0);
         _headUserNameLbl.textColor = [UIColor whiteColor];
         _headUserNameLbl.font = [UIFont systemFontOfSize:16];
         _headUserNameLbl.textAlignment = NSTextAlignmentRight;

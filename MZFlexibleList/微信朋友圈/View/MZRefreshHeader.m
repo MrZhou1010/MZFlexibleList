@@ -38,7 +38,7 @@
         CGFloat marginY = -pullingY - self.ignoredScrollViewContentInsetTop;
         self.mj_y = marginY;
     }
-    [UIView animateWithDuration:2 animations:^{
+    [UIView animateWithDuration:2.0 animations:^{
         self.rotateImageView.transform = CGAffineTransformRotate(self.rotateImageView.transform, M_PI * 0.5);
     }];
 }

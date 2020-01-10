@@ -30,7 +30,7 @@ class FeedItemSectionController: ListSectionController {
         guard let cell = self.collectionContext?.dequeueReusableCell(of: LabelCell.self, for: self, at: index) as? LabelCell else {
             fatalError()
         }
-        cell.text = feedItem.comments[index]
+        cell.text = self.feedItem.comments[index]
         return cell
     }
     
@@ -39,6 +39,7 @@ class FeedItemSectionController: ListSectionController {
     }
 }
 
+// MARK: - ListSupplementaryViewSource
 extension FeedItemSectionController: ListSupplementaryViewSource {
     func supportedElementKinds() -> [String] {
         return [UICollectionView.elementKindSectionHeader, UICollectionView.elementKindSectionFooter]
@@ -60,20 +61,19 @@ extension FeedItemSectionController: ListSupplementaryViewSource {
     }
     
     private func userHeaderView(atIndex index: Int) -> UICollectionReusableView {
-        let view = self.collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, for: self, nibName: "UserHeaderView", bundle: nil, at: index) as? UserHeaderView
-        if view == nil {
+        guard let view = self.collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, for: self, nibName: "UserHeaderView", bundle: nil, at: index) as? UserHeaderView else {
             fatalError()
         }
-        view!.handle = "@" + feedItem.user.handle
-        view!.name = feedItem.user.name
-        return view!
+        view.name = self.feedItem.user.name
+        view.handle = "@" + self.feedItem.user.handle
+        return view
     }
     
     private func userFooterView(atIndex index: Int) -> UICollectionReusableView {
         guard let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, for: self, nibName: "UserFooterView", bundle: nil, at: index) as? UserFooterView else {
             fatalError()
         }
-        view.commentsCount = "\(feedItem.comments.count)"
+        view.commentsCount = "\(self.feedItem.comments.count)"
         return view
     }
     

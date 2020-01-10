@@ -3,7 +3,7 @@
         "modelId":"1",
         "headImage":"http://pic.kekenet.com/2014/1113/16391415865876.jpg",
         "headAvatar":"http://5b0988e595225.cdn.sohucs.com/images/20171002/394dd13e0fb4479aaa159ba45e994bff.jpeg",
-        "headUserName":"Doogore",
+        "headUserName":"Master",
     },
     {
         "modelId":"2",
@@ -15,7 +15,8 @@
         "publicTime":"1小时前"
     },
     {
-        "modelId":"3", "limage":"https://uploadfile.bizhizu.cn/2015/0515/20150515084659228.jpg",
+        "modelId":"3",
+        "limage":"https://uploadfile.bizhizu.cn/2015/0515/20150515084659228.jpg",
         "lavatar":"http://p1.ifengimg.com/fck/2017_46/61dc7cab79bf1e8_w500_h500.jpg",
         "luserName":"鲁树人",
         "lcontent":"伟大的成绩和辛勤劳动是成正比例的，有一分劳动就有一分收获，日积月累，从少到多，奇迹就可以创造出来。",

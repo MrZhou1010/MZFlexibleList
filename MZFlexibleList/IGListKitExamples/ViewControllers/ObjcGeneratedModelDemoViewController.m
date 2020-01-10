@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) IGListAdapter *adapter;
-@property (nonatomic, strong) NSArray<PersonModel *> *persons;
+@property (nonatomic, copy) NSArray<PersonModel *> *persons;
 
 @end
 
@@ -47,6 +47,7 @@
                      ];
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
     self.adapter = [[IGListAdapter alloc] initWithUpdater:[[IGListAdapterUpdater alloc] init] viewController:self];
     self.adapter.dataSource = self;

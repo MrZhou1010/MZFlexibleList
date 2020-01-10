@@ -17,7 +17,7 @@ class SingleSectionStoryboardViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    let data = Array(0..<20)
+    let data = Array(0 ..< 20)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class SingleSectionStoryboardViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension SingleSectionStoryboardViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]
@@ -55,11 +56,16 @@ extension SingleSectionStoryboardViewController: ListAdapterDataSource {
     }
 }
 
+// MARK: - ListSingleSectionControllerDelegate
 extension SingleSectionStoryboardViewController: ListSingleSectionControllerDelegate {
     func didSelect(_ sectionController: ListSingleSectionController, with object: Any) {
         let section = self.adapter.section(for: sectionController) + 1
-        let alert = UIAlertController(title: "Section \(section) was selected \u{1F389}", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let alertVC = UIAlertController(title: "Section \(section) was selected \u{1F389}", message: nil, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func didDeselect(_ sectionController: ListSingleSectionController, with object: Any) {
+       
     }
 }

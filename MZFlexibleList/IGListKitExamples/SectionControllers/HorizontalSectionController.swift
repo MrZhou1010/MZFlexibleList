@@ -24,7 +24,7 @@ class HorizontalSectionController: ListSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        guard let cell = collectionContext?.dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as? EmbeddedCollectionViewCell else {
+        guard let cell = self.collectionContext?.dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as? EmbeddedCollectionViewCell else {
             fatalError()
         }
         self.adapter.collectionView = cell.collectionView
@@ -36,12 +36,13 @@ class HorizontalSectionController: ListSectionController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension HorizontalSectionController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         guard let number = self.number else {
             return []
         }
-        return (0..<number).map {
+        return (0 ..< number).map {
             $0 as ListDiffable
         }
     }

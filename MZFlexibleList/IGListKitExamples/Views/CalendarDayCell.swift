@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IGListKit
 
 class CalendarDayCell: UICollectionViewCell {
     
@@ -25,10 +26,54 @@ class CalendarDayCell: UICollectionViewCell {
     lazy fileprivate var dotsLabel: UILabel = {
         let view = UILabel()
         view.backgroundColor = .clear
-        view.textAlignment = .center
         view.textColor = .red
         view.font = .boldSystemFont(ofSize: 30)
+        view.textAlignment = .center
         self.contentView.addSubview(view)
         return view
     }()
+    
+    var text: String? {
+        get {
+            return self.label.text
+        }
+        set {
+            self.label.text = newValue
+        }
+    }
+
+    var dots: String? {
+        get {
+            return self.dotsLabel.text
+        }
+        set {
+            self.dotsLabel.text = newValue
+        }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let bounds = self.contentView.bounds
+        let half = bounds.height / 2
+        self.label.frame = bounds
+        self.label.layer.cornerRadius = half
+        self.dotsLabel.frame = CGRect(x: 0, y: half - 10, width: bounds.width, height: half)
+    }
+}
+
+// MARK: - ListBindable
+extension CalendarDayCell: ListBindable {
+    func bindViewModel(_ viewModel: Any) {
+        guard let viewModel = viewModel as? DayViewModel else {
+            return
+        }
+        self.label.text = viewModel.day.description
+        self.label.layer.borderColor = viewModel.today ? UIColor.red.cgColor : UIColor.clear.cgColor
+        self.label.backgroundColor = viewModel.selected ? UIColor.red.withAlphaComponent(0.3) : UIColor.clear
+        var dots = ""
+        for _ in 0 ..< viewModel.appointments {
+            dots += "."
+        }
+        self.dotsLabel.text = dots
+    }
 }

@@ -15,16 +15,16 @@ class EmbeddedSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        self.inset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        let height = collectionContext?.containerSize.height ?? 0
+        let height = self.collectionContext?.containerSize.height ?? 0
         return CGSize(width: height, height: height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        guard let cell = collectionContext?.dequeueReusableCell(of: CenterLabelCell.self, for: self, at: index) as? CenterLabelCell else {
+        guard let cell = self.collectionContext?.dequeueReusableCell(of: CenterLabelCell.self, for: self, at: index) as? CenterLabelCell else {
             fatalError()
         }
         let value = self.number ?? 0

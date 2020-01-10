@@ -29,6 +29,7 @@ class WorkingRangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -40,6 +41,7 @@ class WorkingRangeViewController: UIViewController {
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension WorkingRangeViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data as [ListDiffable]

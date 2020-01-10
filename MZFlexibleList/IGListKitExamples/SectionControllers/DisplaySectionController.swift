@@ -14,7 +14,7 @@ class DisplaySectionController: ListSectionController {
     override init() {
         super.init()
         self.displayDelegate = self
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
     }
     
     override func numberOfItems() -> Int {
@@ -34,6 +34,7 @@ class DisplaySectionController: ListSectionController {
     }
 }
 
+// MARK: - ListDisplayDelegate
 extension DisplaySectionController: ListDisplayDelegate {
     func listAdapter(_ listAdapter: ListAdapter, willDisplay sectionController: ListSectionController) {
         print("Will display section \(self.section)")

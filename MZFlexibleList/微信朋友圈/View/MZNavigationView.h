@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^BackBtnActionBlock)(void);
+
 @interface MZNavigationView : UIView
 
-// 动态显示导航栏
+@property (nonatomic, copy) BackBtnActionBlock backBtnActionBlock;
+
+/// 动态显示导航栏
 - (void)showNavigationViewWithAlpha:(CGFloat)alpha;
 
 @end

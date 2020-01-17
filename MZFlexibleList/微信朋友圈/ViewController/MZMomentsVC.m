@@ -71,7 +71,7 @@
     [self.view addSubview:self.navView];
     [self initListData];
     [self addRefreshHeader];
-    //[self addRefreshFooter];
+    [self addRefreshFooter];
     self.adapter.collectionView = self.collectionView;
     __weak typeof(self) weakSelf = self;
     self.navView.backBtnActionBlock = ^{
@@ -113,7 +113,7 @@
 - (void)addRefreshFooter {
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.collectionView.mj_footer endRefreshing];
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
         });
     }];
 }

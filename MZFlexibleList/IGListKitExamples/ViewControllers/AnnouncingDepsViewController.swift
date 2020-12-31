@@ -2,7 +2,7 @@
 //  AnnouncingDepsViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,23 +11,23 @@ import IGListKit
 
 class AnnouncingDepsViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 1)
         return adapter
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let data: [NSNumber] = Array(0 ..< 20).map {
+    private let data: [NSNumber] = Array(0 ..< 20).map {
         NSNumber(value: $0)
     }
     
-    let announcer = IncrementAnnouncer()
+    private let announcer = IncrementAnnouncer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.collectionView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        self.collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -42,11 +42,12 @@ class AnnouncingDepsViewController: UIViewController {
         self.collectionView.frame = self.view.bounds
     }
     
-    @objc func onAdd() {
+    @objc private func onAdd() {
         self.announcer.increment()
     }
 }
 
+// MARK: - ListAdapterDataSource
 extension AnnouncingDepsViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return self.data

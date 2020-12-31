@@ -2,7 +2,7 @@
 //  WorkingRangeViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import IGListKit
 
 class WorkingRangeViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 2)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let data: [Int] = {
+    private let data: [Int] = {
         // only use unique values
         var set = Set<Int>()
         while set.count < 20 {
@@ -25,7 +25,7 @@ class WorkingRangeViewController: UIViewController {
         }
         return Array(set)
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

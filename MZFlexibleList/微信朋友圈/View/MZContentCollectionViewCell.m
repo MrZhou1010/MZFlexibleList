@@ -94,7 +94,7 @@
         _avatarView = [[UIImageView alloc] init];
         _avatarView.frame = CGRectMake(10.0, 10.0, 50.0, 50.0);
         _avatarView.contentMode = UIViewContentModeScaleAspectFill;
-        _avatarView.layer.cornerRadius = 10;
+        _avatarView.layer.cornerRadius = 10.0;
         _avatarView.layer.masksToBounds = YES;
     }
     return _avatarView;

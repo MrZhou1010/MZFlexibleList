@@ -2,7 +2,7 @@
 //  SearchSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ protocol SearchSectionControllerDelegate: class {
 
 class SearchSectionController: ListSectionController, UISearchBarDelegate, ListScrollDelegate {
     
-    weak var delegate: SearchSectionControllerDelegate?
+    public weak var delegate: SearchSectionControllerDelegate?
     
     override init() {
         super.init()
@@ -23,7 +23,7 @@ class SearchSectionController: ListSectionController, UISearchBarDelegate, ListS
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 44)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 44.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {

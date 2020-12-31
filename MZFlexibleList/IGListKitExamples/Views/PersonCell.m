@@ -2,7 +2,7 @@
 //  PersonCell.m
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -45,12 +45,12 @@
     self.separatorView = [[UIView alloc] init];
     self.separatorView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     [self.contentView addSubview:self.separatorView];
-    self.separatorHeight = (1 / [UIScreen mainScreen].scale);
+    self.separatorHeight = (1.0 / [UIScreen mainScreen].scale);
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    const CGFloat outerInset = 10;
+    const CGFloat outerInset = 10.0;
     const CGRect bounds = self.contentView.bounds;
     const CGRect insetBounds = CGRectInset(bounds, outerInset, outerInset);
     const CGFloat avatarViewWidth = insetBounds.size.height;
@@ -60,8 +60,8 @@
         self.avatarView.layer.masksToBounds = YES;
         self.avatarView.frame = avatarViewFrame;
     }
-    const CGFloat avatarLabelInset = 8;
-    self.nameLabel.frame = CGRectMake(CGRectGetMaxX(avatarViewFrame) + avatarLabelInset, outerInset, CGRectGetWidth(insetBounds) - avatarViewWidth - avatarLabelInset * 2, CGRectGetHeight(insetBounds));
+    const CGFloat avatarLabelInset = 8.0;
+    self.nameLabel.frame = CGRectMake(CGRectGetMaxX(avatarViewFrame) + avatarLabelInset, outerInset, CGRectGetWidth(insetBounds) - avatarViewWidth - avatarLabelInset * 2.0, CGRectGetHeight(insetBounds));
     self.separatorView.frame = CGRectMake(0, CGRectGetHeight(bounds) - self.separatorHeight, CGRectGetWidth(bounds), self.separatorHeight);
 }
 

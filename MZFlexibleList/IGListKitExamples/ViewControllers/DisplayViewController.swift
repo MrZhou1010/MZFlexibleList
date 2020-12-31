@@ -2,7 +2,7 @@
 //  DisplayViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,11 +11,11 @@ import IGListKit
 
 class DisplayViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     override func viewDidLoad() {
         super.viewDidLoad()

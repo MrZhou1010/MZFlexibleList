@@ -10,11 +10,11 @@ import UIKit
 import IGListKit
 
 class DemoItem: NSObject {
-    let name: String
-    let controllerClass: UIViewController.Type
-    let controllerIdentifier: String?
+    public let name: String
+    public let controllerClass: UIViewController.Type
+    public let controllerIdentifier: String?
     
-    init(name: String, controllerClass: UIViewController.Type, controllerIdentifier: String? = nil) {
+    public init(name: String, controllerClass: UIViewController.Type, controllerIdentifier: String? = nil) {
         self.name = name
         self.controllerClass = controllerClass
         self.controllerIdentifier = controllerIdentifier

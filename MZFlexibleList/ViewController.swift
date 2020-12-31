@@ -28,9 +28,8 @@ class ViewController: UIViewController {
     }()
     
     @objc private func btnClicked(btn: UIButton) {
-        let momentsVC = MZMomentsVC()
-        // let momentsVC = DemosViewController()
+        // let momentsVC = MZMomentsVC()
+        let momentsVC = DemosViewController()
         self.navigationController?.pushViewController(momentsVC, animated: true)
     }
 }
-

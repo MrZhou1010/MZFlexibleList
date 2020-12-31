@@ -13,6 +13,7 @@ class ExpandableSectionController: ListSectionController {
     
     /// 是否扩大
     private var expanded = false
+    
     private var object: String?
     
     override func sizeForItem(at index: Int) -> CGSize {

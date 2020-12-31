@@ -10,11 +10,11 @@ import UIKit
 import IGListKit
 
 final class GridItem: NSObject {
-    let color: UIColor
-    let itemCount: Int
-    var items: [String] = []
+    public let color: UIColor
+    public let itemCount: Int
+    public var items: [String] = []
     
-    init(color: UIColor, itemCount: Int) {
+    public init(color: UIColor, itemCount: Int) {
         self.color = color
         self.itemCount = itemCount
         super.init()

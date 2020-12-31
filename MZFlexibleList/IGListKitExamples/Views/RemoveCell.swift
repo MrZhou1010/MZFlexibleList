@@ -2,7 +2,7 @@
 //  RemoveCell.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ protocol RemoveCellDelegate: class {
 
 final class RemoveCell: UICollectionViewCell {
     
-    weak var delegate: RemoveCellDelegate?
+    public weak var delegate: RemoveCellDelegate?
     
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -51,7 +51,7 @@ final class RemoveCell: UICollectionViewCell {
         self.button.frame = divide.remainder
     }
     
-    @objc func onButton(_ button: UIButton) {
+    @objc private func onButton(_ button: UIButton) {
         self.delegate?.removeCellDidTapButton(self)
     }
 }

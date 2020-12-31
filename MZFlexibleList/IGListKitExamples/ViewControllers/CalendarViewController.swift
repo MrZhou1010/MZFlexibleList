@@ -2,7 +2,7 @@
 //  CalendarViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,14 +11,14 @@ import IGListKit
 
 class CalendarViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ListCollectionViewLayout(stickyHeaders: false, topContentInset: 0, stretchToEdge: false)
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: ListCollectionViewLayout(stickyHeaders: false, topContentInset: 0, stretchToEdge: false)
     )
     
-    var months = [Month]()
+    private var months = [Month]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

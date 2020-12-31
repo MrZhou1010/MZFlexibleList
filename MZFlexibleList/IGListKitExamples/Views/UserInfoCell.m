@@ -2,7 +2,7 @@
 //  UserInfoCell.m
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -51,7 +51,7 @@
     self.avatarView.frame = CGRectMake(avatarLeftSpace, avatarTopSpace, avatarViewWidth, avatarViewWidth);
     self.avatarView.layer.cornerRadius = MIN(CGRectGetHeight(self.avatarView.frame), CGRectGetWidth(self.avatarView.frame)) / 2.0;
     self.avatarView.layer.masksToBounds = YES;
-    self.nameLabel.frame = CGRectMake(CGRectGetMaxX(self.avatarView.frame) + 8.0, CGRectGetMinY(self.avatarView.frame), CGRectGetWidth(bounds) - CGRectGetMaxX(self.avatarView.frame) - 8.0 * 2, CGRectGetHeight(self.avatarView.frame));
+    self.nameLabel.frame = CGRectMake(CGRectGetMaxX(self.avatarView.frame) + 8.0, CGRectGetMinY(self.avatarView.frame), CGRectGetWidth(bounds) - CGRectGetMaxX(self.avatarView.frame) - 8.0 * 2.0, CGRectGetHeight(self.avatarView.frame));
 }
 
 - (void)setName:(NSString *)name {

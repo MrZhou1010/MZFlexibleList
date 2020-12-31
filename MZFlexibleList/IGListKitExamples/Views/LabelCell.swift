@@ -21,15 +21,16 @@ class LabelCell: UICollectionViewCell {
         }
     }
     
-    fileprivate static let insets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)
+    fileprivate static let insets = UIEdgeInsets(top: 8.0, left: 15.0, bottom: 8.0, right: 15.0)
+    
     fileprivate static let font = UIFont.systemFont(ofSize: 17)
     
-    static var singleLineHeight: CGFloat {
+    public static var singleLineHeight: CGFloat {
         return self.font.lineHeight + self.insets.top + self.insets.bottom
     }
     
     /// 根据文本内容获取宽高
-    static func textHeight(_ text: String, width: CGFloat) -> CGFloat {
+    public static func textHeight(_ text: String, width: CGFloat) -> CGFloat {
         let constrainedSize = CGSize(width: width - self.insets.left - self.insets.right, height: CGFloat.greatestFiniteMagnitude)
         let attributes = [NSAttributedString.Key.font: self.font]
         let options: NSStringDrawingOptions = [.usesFontLeading, .usesLineFragmentOrigin]

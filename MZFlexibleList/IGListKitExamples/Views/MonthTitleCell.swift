@@ -2,7 +2,7 @@
 //  MonthTitleCell.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -14,14 +14,14 @@ class MonthTitleCell: UICollectionViewCell {
     fileprivate lazy var label: UILabel = {
         let view = UILabel()
         view.backgroundColor = .clear
-        view.textColor = UIColor(white: 0.7, alpha: 1)
+        view.textColor = UIColor(white: 0.7, alpha: 1.0)
         view.font = UIFont.boldSystemFont(ofSize: 13)
         view.textAlignment = .center
         self.contentView.addSubview(view)
         return view
     }()
     
-    var text: String? {
+    public var text: String? {
         get {
             return self.label.text
         }

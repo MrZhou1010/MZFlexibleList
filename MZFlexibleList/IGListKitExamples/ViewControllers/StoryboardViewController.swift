@@ -2,7 +2,7 @@
 //  StoryboardViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -12,44 +12,43 @@ import IGListKit
 class StoryboardViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
-    lazy var adapter: ListAdapter = {
+    
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
-
-    lazy var people = [Person(pk: 1, name: "Littlefinger"),
-                       Person(pk: 2, name: "Tommen Baratheon"),
-                       Person(pk: 3, name: "Roose Bolton"),
-                       Person(pk: 4, name: "Brienne of Tarth"),
-                       Person(pk: 5, name: "Bronn"),
-                       Person(pk: 6, name: "Gilly"),
-                       Person(pk: 7, name: "Theon Greyjoy"),
-                       Person(pk: 8, name: "Jaqen H'ghar"),
-                       Person(pk: 9, name: "Cersei Lannister"),
-                       Person(pk: 10, name: "Jaime Lannister"),
-                       Person(pk: 11, name: "Tyrion Lannister"),
-                       Person(pk: 12, name: "Melisandre"),
-                       Person(pk: 13, name: "Missandei"),
-                       Person(pk: 14, name: "Jorah Mormont"),
-                       Person(pk: 15, name: "Khal Moro"),
-                       Person(pk: 16, name: "Daario Naharis"),
-                       Person(pk: 17, name: "Jon Snow"),
-                       Person(pk: 18, name: "Arya Stark"),
-                       Person(pk: 19, name: "Bran Stark"),
-                       Person(pk: 20, name: "Sansa Stark"),
-                       Person(pk: 21, name: "Daenerys Targaryen"),
-                       Person(pk: 22, name: "Samwell Tarly"),
-                       Person(pk: 23, name: "Tormund"),
-                       Person(pk: 24, name: "Margaery Tyrell"),
-                       Person(pk: 25, name: "Varys"),
-                       Person(pk: 26, name: "Renly Baratheon"),
-                       Person(pk: 27, name: "Joffrey Baratheon"),
-                       Person(pk: 28, name: "Stannis Baratheon"),
-                       Person(pk: 29, name: "Hodor"),
-                       Person(pk: 30, name: "Tywin Lannister"),
-                       Person(pk: 31, name: "The Hound"),
-                       Person(pk: 32, name: "Ramsay Bolton")]
-
+    
+    private lazy var people = [Person(pk: 1, name: "Littlefinger"),
+                               Person(pk: 2, name: "Tommen Baratheon"),
+                               Person(pk: 3, name: "Roose Bolton"),
+                               Person(pk: 4, name: "Brienne of Tarth"),
+                               Person(pk: 5, name: "Bronn"),
+                               Person(pk: 6, name: "Gilly"),
+                               Person(pk: 7, name: "Theon Greyjoy"),
+                               Person(pk: 8, name: "Jaqen H'ghar"),
+                               Person(pk: 9, name: "Cersei Lannister"),
+                               Person(pk: 10, name: "Jaime Lannister"),
+                               Person(pk: 11, name: "Tyrion Lannister"),
+                               Person(pk: 12, name: "Melisandre"),
+                               Person(pk: 13, name: "Missandei"),
+                               Person(pk: 14, name: "Jorah Mormont"),
+                               Person(pk: 15, name: "Khal Moro"),
+                               Person(pk: 16, name: "Daario Naharis"),
+                               Person(pk: 17, name: "Jon Snow"),
+                               Person(pk: 18, name: "Arya Stark"),
+                               Person(pk: 19, name: "Bran Stark"),
+                               Person(pk: 20, name: "Sansa Stark"),
+                               Person(pk: 21, name: "Daenerys Targaryen"),
+                               Person(pk: 22, name: "Samwell Tarly"),
+                               Person(pk: 23, name: "Tormund"),
+                               Person(pk: 24, name: "Margaery Tyrell"),
+                               Person(pk: 25, name: "Varys"),
+                               Person(pk: 26, name: "Renly Baratheon"),
+                               Person(pk: 27, name: "Joffrey Baratheon"),
+                               Person(pk: 28, name: "Stannis Baratheon"),
+                               Person(pk: 29, name: "Hodor"),
+                               Person(pk: 30, name: "Tywin Lannister"),
+                               Person(pk: 31, name: "The Hound"),
+                               Person(pk: 32, name: "Ramsay Bolton")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

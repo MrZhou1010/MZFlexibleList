@@ -2,7 +2,7 @@
 //  StoryboardLabelSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -21,7 +21,7 @@ class StoryboardLabelSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 10)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right: 10.0)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {

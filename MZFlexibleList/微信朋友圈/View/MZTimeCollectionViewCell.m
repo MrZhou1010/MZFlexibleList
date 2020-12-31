@@ -2,7 +2,7 @@
 //  MZTimeCollectionViewCell.m
 //  MZFlexibleList
 //
-//  Created by 木木 on 2020/1/9.
+//  Created by Mr.Z on 2020/1/9.
 //  Copyright © 2020 Mr.Z. All rights reserved.
 //
 
@@ -60,7 +60,7 @@
 - (CALayer *)separator {
     if (!_separator) {
         _separator = [CALayer layer];
-        _separator.frame = CGRectMake(0, self.bounds.size.height - (1 / [UIScreen mainScreen].scale), self.bounds.size.width, 1 / [UIScreen mainScreen].scale);
+        _separator.frame = CGRectMake(0, self.bounds.size.height - (1.0 / [UIScreen mainScreen].scale), self.bounds.size.width, 1.0 / [UIScreen mainScreen].scale);
         _separator.backgroundColor = [UIColor lightGrayColor].CGColor;
     }
     return _separator;

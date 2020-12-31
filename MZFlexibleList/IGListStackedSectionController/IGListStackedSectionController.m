@@ -454,8 +454,11 @@ static void * kStackedSectionControllerIndexKey = &kStackedSectionControllerInde
                  __PRETTY_FUNCTION__);
 }
 
-#pragma mark - IGListDisplayDelegate
+- (void)invalidateLayoutInSectionController:(nonnull IGListSectionController *)sectionController atIndexes:(nonnull NSIndexSet *)indexes {
+    
+}
 
+#pragma mark - IGListDisplayDelegate
 - (void)listAdapter:(IGListAdapter *)listAdapter willDisplaySectionController:(IGListSectionController *)sectionController cell:(UICollectionViewCell *)cell atIndex:(NSInteger)index {
     IGListSectionController *childSectionController = [self sectionControllerForObjectIndex:index];
     const NSInteger localIndex = [self _localIndexForSectionController:childSectionController index:index];
@@ -535,5 +538,9 @@ static void * kStackedSectionControllerIndexKey = &kStackedSectionControllerInde
         [[childSectionController workingRangeDelegate] listAdapter:listAdapter sectionControllerDidExitWorkingRange:childSectionController];
     }
 }
+
+@synthesize experiments;
+
+@synthesize scrollingTraits;
 
 @end

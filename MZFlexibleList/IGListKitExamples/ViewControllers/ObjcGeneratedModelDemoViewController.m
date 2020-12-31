@@ -2,7 +2,7 @@
 //  ObjcGeneratedModelDemoViewController.m
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -45,7 +45,6 @@
                      [[PersonModel alloc] initWithFirstName:@"Ayush" lastName:@"Saraswat" uniqueId:@"19"],
                      [[PersonModel alloc] initWithFirstName:@"Dustin" lastName:@"Shahidehpour" uniqueId:@"20"],
                      ];
-
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];

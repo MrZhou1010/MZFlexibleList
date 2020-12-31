@@ -11,14 +11,14 @@ import IGListKit
 
 class DemosViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self)
         return adapter
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let demos: [DemoItem] = [
+    private let demos: [DemoItem] = [
         DemoItem(name: "Tail Loading", controllerClass: LoadMoreViewController.self),
         DemoItem(name: "Search Autocomplete", controllerClass: SearchViewController.self),
         DemoItem(name: "Mixed Data", controllerClass: MixedDataViewController.self),
@@ -42,7 +42,7 @@ class DemosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Demos"
+        self.navigationItem.title = "Demos"
         self.collectionView.backgroundColor = UIColor.white
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self

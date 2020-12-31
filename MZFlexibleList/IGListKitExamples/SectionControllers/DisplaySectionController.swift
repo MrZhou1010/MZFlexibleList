@@ -14,7 +14,7 @@ class DisplaySectionController: ListSectionController {
     override init() {
         super.init()
         self.displayDelegate = self
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right: 0)
     }
     
     override func numberOfItems() -> Int {
@@ -22,7 +22,7 @@ class DisplaySectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {

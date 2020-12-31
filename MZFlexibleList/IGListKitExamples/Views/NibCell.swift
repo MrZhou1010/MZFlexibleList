@@ -2,7 +2,7 @@
 //  NibCell.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ final class NibCell: UICollectionViewCell {
     
     @IBOutlet private var textLabel: UILabel!
     
-    var text: String? {
+    public var text: String? {
         didSet {
             self.textLabel.text = self.text
         }

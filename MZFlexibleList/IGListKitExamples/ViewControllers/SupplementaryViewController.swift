@@ -2,7 +2,7 @@
 //  SupplementaryViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,16 +11,16 @@ import IGListKit
 
 class SupplementaryViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let feedItems = [FeedItem(pk: 1, user: User(pk: 100, name: "Jesse", handle: "jesse_squires"), comments: ["You rock!", "Hmm you sure about that?"]),
-                     FeedItem(pk: 2, user: User(pk: 101, name: "Ryan", handle: "_ryannystrom"), comments: ["lgtm", "lol", "Let's try it!"]),
-                     FeedItem(pk: 3, user: User(pk: 102, name: "Ann", handle: "abaum"), comments: ["Good luck!"]),
-                     FeedItem(pk: 4, user: User(pk: 103, name: "Phil", handle: "phil"), comments: ["yoooooooo", "What's the eta?"])]
+    private let feedItems = [FeedItem(pk: 1, user: User(pk: 100, name: "Jesse", handle: "jesse_squires"), comments: ["You rock!", "Hmm you sure about that?"]),
+                             FeedItem(pk: 2, user: User(pk: 101, name: "Ryan", handle: "_ryannystrom"), comments: ["lgtm", "lol", "Let's try it!"]),
+                             FeedItem(pk: 3, user: User(pk: 102, name: "Ann", handle: "abaum"), comments: ["Good luck!"]),
+                             FeedItem(pk: 4, user: User(pk: 103, name: "Phil", handle: "phil"), comments: ["yoooooooo", "What's the eta?"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()

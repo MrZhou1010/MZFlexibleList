@@ -11,7 +11,7 @@ import IGListKit
 
 class CalendarDayCell: UICollectionViewCell {
     
-    lazy fileprivate var label: UILabel = {
+    fileprivate lazy var label: UILabel = {
         let view = UILabel()
         view.backgroundColor = .clear
         view.textColor = .black
@@ -23,7 +23,7 @@ class CalendarDayCell: UICollectionViewCell {
         return view
     }()
 
-    lazy fileprivate var dotsLabel: UILabel = {
+    fileprivate lazy var dotsLabel: UILabel = {
         let view = UILabel()
         view.backgroundColor = .clear
         view.textColor = .red
@@ -33,7 +33,7 @@ class CalendarDayCell: UICollectionViewCell {
         return view
     }()
     
-    var text: String? {
+    public var text: String? {
         get {
             return self.label.text
         }
@@ -42,7 +42,7 @@ class CalendarDayCell: UICollectionViewCell {
         }
     }
 
-    var dots: String? {
+    public var dots: String? {
         get {
             return self.dotsLabel.text
         }
@@ -54,10 +54,10 @@ class CalendarDayCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         let bounds = self.contentView.bounds
-        let half = bounds.height / 2
+        let half = bounds.height / 2.0
         self.label.frame = bounds
         self.label.layer.cornerRadius = half
-        self.dotsLabel.frame = CGRect(x: 0, y: half - 10, width: bounds.width, height: half)
+        self.dotsLabel.frame = CGRect(x: 0, y: half - 10.0, width: bounds.width, height: half)
     }
 }
 

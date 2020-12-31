@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZListModel : NSObject<IGListDiffable>
+@interface MZListModel : NSObject <IGListDiffable>
 
 @property (nonatomic, copy) NSString *modelId;
 @property (nonatomic, copy) NSString *headImage;

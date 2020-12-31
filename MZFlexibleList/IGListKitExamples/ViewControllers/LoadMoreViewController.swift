@@ -11,16 +11,18 @@ import IGListKit
 
 class LoadMoreViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         let adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self)
         return adapter
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    lazy var items = Array(0...20)
-    var loading = false
-    let spinToken = "spinner"
+    private lazy var items = Array(0...20)
+    
+    private var loading = false
+    
+    private let spinToken = "spinner"
     
     override func viewDidLoad() {
         super.viewDidLoad()

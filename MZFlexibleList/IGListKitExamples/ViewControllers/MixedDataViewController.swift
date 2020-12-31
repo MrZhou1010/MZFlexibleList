@@ -2,7 +2,7 @@
 //  MixedDataViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import IGListKit
 
 class MixedDataViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    var data: [Any] = [
+    private var data: [Any] = [
         "Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
         GridItem(color: UIColor(red: 237 / 255.0, green: 73 / 255.0, blue: 86 / 255.0, alpha: 1), itemCount: 6),
         User(pk: 2, name: "Ryan Olson", handle: "ryanolsonk"),
@@ -32,14 +32,14 @@ class MixedDataViewController: UIViewController {
         User(pk: 1, name: "Ryan Nystrom", handle: "_ryannystrom")
     ]
     
-    let segments: [(String, Any.Type?)] = [
+    private let segments: [(String, Any.Type?)] = [
         ("All", nil),
         ("Colors", GridItem.self),
         ("Text", String.self),
         ("Users", User.self)
     ]
     
-    var selectedClass: Any.Type?
+    private var selectedClass: Any.Type?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +69,7 @@ class MixedDataViewController: UIViewController {
     }
     
     @available(iOS 9.0, *)
-    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+    @objc private func handleLongGesture(gesture: UILongPressGestureRecognizer) {
         switch gesture.state {
         case .began:
             let touchLocation = gesture.location(in: self.collectionView)
@@ -89,7 +89,7 @@ class MixedDataViewController: UIViewController {
         }
     }
     
-    @objc func onControl(_ control: UISegmentedControl) {
+    @objc private func onControl(_ control: UISegmentedControl) {
         self.selectedClass = self.segments[control.selectedSegmentIndex].1
         self.adapter.performUpdates(animated: true, completion: nil)
     }

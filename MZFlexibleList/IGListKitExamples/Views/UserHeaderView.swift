@@ -13,7 +13,7 @@ class UserHeaderView: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var handleLabel: UILabel!
 
-    var name: String? {
+    public var name: String? {
         get {
             return self.nameLabel.text
         }
@@ -22,7 +22,7 @@ class UserHeaderView: UICollectionViewCell {
         }
     }
 
-    var handle: String? {
+    public var handle: String? {
         get {
             return self.handleLabel.text
         }

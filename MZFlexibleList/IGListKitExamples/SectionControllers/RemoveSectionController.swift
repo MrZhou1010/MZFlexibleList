@@ -2,7 +2,7 @@
 //  RemoveSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -15,17 +15,17 @@ protocol RemoveSectionControllerDelegate: class {
 
 class RemoveSectionController: ListSectionController, RemoveCellDelegate {
     
-    weak var delegate: RemoveSectionControllerDelegate?
+    public weak var delegate: RemoveSectionControllerDelegate?
     
     private var number: Int?
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right: 0)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {

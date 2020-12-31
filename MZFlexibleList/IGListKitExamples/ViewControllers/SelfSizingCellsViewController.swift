@@ -2,7 +2,7 @@
 //  SelfSizingCellsViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,11 +11,11 @@ import IGListKit
 
 class SelfSizingCellsViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView: UICollectionView = {
+    private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(width: 100, height: 40)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -23,7 +23,7 @@ class SelfSizingCellsViewController: UIViewController {
         return collectionView
     }()
     
-    let data = [
+    private let data = [
         SelectionModel(options: ["Leverage agile", "frameworks", "robust synopsis", "high level", "overviews",
                                  "Iterative approaches", "corporate strategy", "foster collaborative",
                                  "overall value", "proposition", "Organically grow", "holistic world view",

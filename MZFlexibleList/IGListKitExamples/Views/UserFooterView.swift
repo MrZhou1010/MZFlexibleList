@@ -12,7 +12,7 @@ class UserFooterView: UICollectionViewCell {
 
     @IBOutlet private weak var commentsCountLabel: UILabel!
 
-    var commentsCount: String? {
+    public var commentsCount: String? {
         get {
             return self.commentsCountLabel.text
         }

@@ -2,7 +2,7 @@
 //  NestedAdapterViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import IGListKit
 
 class NestedAdapterViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    let data: [Any] = [
+    private let data: [Any] = [
         "Ridiculus Elit Tellus Purus Aenean",
         "Condimentum Sollicitudin Adipiscing",
         14,

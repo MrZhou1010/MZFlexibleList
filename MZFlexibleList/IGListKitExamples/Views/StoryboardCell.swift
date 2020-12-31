@@ -2,7 +2,7 @@
 //  StoryboardCell.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ class StoryboardCell: UICollectionViewCell {
     
     @IBOutlet private weak var textLabel: UILabel!
     
-    var text: String? {
+    public var text: String? {
         get {
             return self.textLabel.text
         }

@@ -47,7 +47,7 @@
         _headAvatarView = [[UIImageView alloc] init];
         _headAvatarView.frame = CGRectMake(self.bounds.size.width - 96.0, self.bounds.size.height - 120.0, 80.0, 80.0);
         _headAvatarView.contentMode = UIViewContentModeScaleAspectFill;
-        _headAvatarView.layer.cornerRadius = 10;
+        _headAvatarView.layer.cornerRadius = 10.0;
         _headAvatarView.layer.masksToBounds = YES;
     }
     return _headAvatarView;

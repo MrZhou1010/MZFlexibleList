@@ -2,7 +2,7 @@
 //  EmptyViewController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/10.
+//  Created by Mr.Z on 2019/12/10.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import IGListKit
 
 class EmptyViewController: UIViewController {
     
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
 
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
-    let emptyLabel: UILabel = {
+    private let emptyLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.text = "No more data!"
@@ -26,14 +26,14 @@ class EmptyViewController: UIViewController {
         return label
     }()
     
-    var tally = 4
+    private var tally = 4
 
-    var data = [1, 2, 3, 4]
+    private var data = [1, 2, 3, 4]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        self.collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.view.addSubview(self.collectionView)
         self.adapter.dataSource = self
         self.adapter.collectionView = self.collectionView
@@ -45,7 +45,7 @@ class EmptyViewController: UIViewController {
         self.collectionView.frame = self.view.bounds
     }
 
-    @objc func onAdd() {
+    @objc private func onAdd() {
         self.data.append(self.tally + 1)
         self.tally += 1
         self.adapter.performUpdates(animated: true, completion: nil)

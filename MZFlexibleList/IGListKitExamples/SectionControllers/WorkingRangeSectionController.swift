@@ -2,7 +2,7 @@
 //  WorkingRangeSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -12,7 +12,9 @@ import IGListKit
 class WorkingRangeSectionController: ListSectionController, ListWorkingRangeDelegate {
     
     private var height: Int?
+    
     private var downloadedImage: UIImage?
+    
     private var task: URLSessionDataTask?
     
     private var urlString: String? {

@@ -2,7 +2,7 @@
 //  ReorderableSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class ReorderableSectionController: ListSectionController {
     private var object: String?
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {

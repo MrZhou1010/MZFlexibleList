@@ -10,37 +10,36 @@
 #endif
 #endif
 
-#import "IGListAdapter.h"
-#import "IGListAdapterDataSource.h"
-#import "IGListAdapterDelegate.h"
-#import "IGListAdapterMoveDelegate.h"
-#import "IGListAdapterPerformanceDelegate.h"
-#import "IGListAdapterUpdateListener.h"
-#import "IGListAdapterUpdater.h"
-#import "IGListAdapterUpdaterDelegate.h"
-#import "IGListBatchContext.h"
-#import "IGListBindable.h"
-#import "IGListBindingSectionController.h"
-#import "IGListBindingSectionControllerDataSource.h"
-#import "IGListBindingSectionControllerSelectionDelegate.h"
-#import "IGListCollectionContext.h"
-#import "IGListCollectionScrollingTraits.h"
-#import "IGListCollectionView.h"
-#import "IGListCollectionViewDelegateLayout.h"
-#import "IGListCollectionViewLayout.h"
-#import "IGListCollectionViewLayoutCompatible.h"
-#import "IGListDisplayDelegate.h"
-#import "IGListGenericSectionController.h"
-#import "IGListKit.h"
-#import "IGListReloadDataUpdater.h"
-#import "IGListScrollDelegate.h"
-#import "IGListSectionController.h"
-#import "IGListSingleSectionController.h"
-#import "IGListSupplementaryViewSource.h"
-#import "IGListTransitionDelegate.h"
-#import "IGListUpdatingDelegate.h"
-#import "IGListWorkingRangeDelegate.h"
+#import <IGListKit/IGListAdapter.h>
+#import <IGListKit/IGListAdapterDataSource.h>
+#import <IGListKit/IGListAdapterDelegate.h>
+#import <IGListKit/IGListAdapterMoveDelegate.h>
+#import <IGListKit/IGListAdapterPerformanceDelegate.h>
+#import <IGListKit/IGListAdapterUpdateListener.h>
+#import <IGListKit/IGListAdapterUpdater.h>
+#import <IGListKit/IGListAdapterUpdaterDelegate.h>
+#import <IGListKit/IGListBatchContext.h>
+#import <IGListKit/IGListBindable.h>
+#import <IGListKit/IGListBindingSectionController.h>
+#import <IGListKit/IGListBindingSectionControllerDataSource.h>
+#import <IGListKit/IGListBindingSectionControllerSelectionDelegate.h>
+#import <IGListKit/IGListCollectionContext.h>
+#import <IGListKit/IGListCollectionScrollingTraits.h>
+#import <IGListKit/IGListCollectionView.h>
+#import <IGListKit/IGListCollectionViewDelegateLayout.h>
+#import <IGListKit/IGListCollectionViewLayout.h>
+#import <IGListKit/IGListCollectionViewLayoutCompatible.h>
+#import <IGListKit/IGListDisplayDelegate.h>
+#import <IGListKit/IGListGenericSectionController.h>
+#import <IGListKit/IGListKit.h>
+#import <IGListKit/IGListReloadDataUpdater.h>
+#import <IGListKit/IGListScrollDelegate.h>
+#import <IGListKit/IGListSectionController.h>
+#import <IGListKit/IGListSingleSectionController.h>
+#import <IGListKit/IGListSupplementaryViewSource.h>
+#import <IGListKit/IGListTransitionDelegate.h>
+#import <IGListKit/IGListUpdatingDelegate.h>
+#import <IGListKit/IGListWorkingRangeDelegate.h>
 
 FOUNDATION_EXPORT double IGListKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char IGListKitVersionString[];
-

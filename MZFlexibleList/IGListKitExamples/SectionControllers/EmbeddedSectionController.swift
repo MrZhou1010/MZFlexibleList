@@ -15,7 +15,7 @@ class EmbeddedSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        self.inset = UIEdgeInsets(top: 0, left: 10.0, bottom: 0, right: 10.0)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {

@@ -2,7 +2,7 @@
 //  DetailLabelCell.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -28,7 +28,7 @@ class DetailLabelCell: UICollectionViewCell {
         }
     }
     
-    fileprivate let padding: CGFloat = 15.0
+    private let padding: CGFloat = 15.0
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()

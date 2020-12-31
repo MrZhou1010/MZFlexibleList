@@ -23,7 +23,7 @@ class FeedItemSectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
@@ -57,7 +57,7 @@ extension FeedItemSectionController: ListSupplementaryViewSource {
     }
     
     func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 40)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 40.0)
     }
     
     private func userHeaderView(atIndex index: Int) -> UICollectionReusableView {
@@ -76,6 +76,4 @@ extension FeedItemSectionController: ListSupplementaryViewSource {
         view.commentsCount = "\(self.feedItem.comments.count)"
         return view
     }
-    
-    
 }

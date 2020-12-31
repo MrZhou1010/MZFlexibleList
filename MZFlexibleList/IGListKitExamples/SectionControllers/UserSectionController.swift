@@ -2,7 +2,7 @@
 //  UserSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ import IGListKit
 class UserSectionController: ListSectionController {
     
     private var user: User?
+    
     private let isReorderable: Bool
 
     required init(isReorderable: Bool = false) {
@@ -20,7 +21,7 @@ class UserSectionController: ListSectionController {
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {

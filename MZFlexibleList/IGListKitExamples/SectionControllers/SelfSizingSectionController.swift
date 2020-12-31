@@ -2,7 +2,7 @@
 //  SelfSizingSectionController.swift
 //  MZFlexibleList
 //
-//  Created by 木木 on 2019/12/11.
+//  Created by Mr.Z on 2019/12/11.
 //  Copyright © 2019 Mr.Z. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class SelfSizingSectionController: ListSectionController {
     
     override init() {
         super.init()
-        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        self.inset = UIEdgeInsets(top: 0, left: 0, bottom: 10.0, right: 0)
         self.minimumLineSpacing = 4.0
         self.minimumInteritemSpacing = 4.0
     }
@@ -25,7 +25,7 @@ class SelfSizingSectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: self.collectionContext!.containerSize.width, height: 55)
+        return CGSize(width: self.collectionContext!.containerSize.width, height: 55.0)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
